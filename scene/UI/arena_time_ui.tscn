@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckh6jbtffyexi"]
+
+[ext_resource type="Script" uid="uid://dhps107bd2awk" path="res://scene/UI/arena_time_ui.gd" id="1_yqu2s"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_tn12c"]
+
+[node name="ArenaTimeUI" type="CanvasLayer"]
+script = ExtResource("1_yqu2s")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 29.0
+offset_bottom = 29.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_constants/margin_top = 8
+
+[node name="Time" type="Label" parent="MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 13
+theme_override_fonts/font = ExtResource("2_tn12c")
+theme_override_font_sizes/font_size = 64
+text = "Timer"

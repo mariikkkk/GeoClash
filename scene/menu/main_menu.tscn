@@ -1,0 +1,200 @@
+[gd_scene load_steps=24 format=3 uid="uid://p1vhfdvspivr"]
+
+[ext_resource type="Script" uid="uid://1fg728f08dfy" path="res://scene/menu/main_menu.gd" id="1_4o61b"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="1_5tvlq"]
+[ext_resource type="FontFile" uid="uid://dt0c207wbisiu" path="res://resources/fonts/HomeVideo-BLG6G.ttf" id="2_tm3bt"]
+[ext_resource type="Texture2D" uid="uid://bmmkj0njqwidd" path="res://scene/menu/Ellipse 1.png" id="4_1qive"]
+[ext_resource type="Texture2D" uid="uid://bhr7cth31v0fa" path="res://scene/menu/Polygon 1.png" id="5_hiun5"]
+[ext_resource type="Texture2D" uid="uid://cshhnk5wwrnoo" path="res://scene/menu/Polygon 2.png" id="6_ph65b"]
+[ext_resource type="Texture2D" uid="uid://bawxo150txb3j" path="res://scene/menu/Polygon 3.png" id="7_x40ml"]
+[ext_resource type="Texture2D" uid="uid://cvefj7f3n355v" path="res://scene/menu/Polygon 4.png" id="8_r265i"]
+[ext_resource type="Texture2D" uid="uid://7impde7qb2t8" path="res://scene/menu/Polygon 5.png" id="9_7kagp"]
+[ext_resource type="Texture2D" uid="uid://cikfmsl4gsp4a" path="res://scene/menu/Polygon 6.png" id="10_stntj"]
+[ext_resource type="Texture2D" uid="uid://boiu2v6uahynf" path="res://scene/menu/Rectangle 4.png" id="11_844ar"]
+[ext_resource type="Texture2D" uid="uid://wc75ltvcy4m5" path="res://scene/menu/Rectangle 6.png" id="12_8otnm"]
+[ext_resource type="Texture2D" uid="uid://t1qpo441olx8" path="res://scene/menu/Rectangle 5.png" id="13_mslvp"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cfie"]
+bg_color = Color(1, 1, 1, 1)
+
+[sub_resource type="Theme" id="Theme_m4627"]
+default_font = ExtResource("2_tm3bt")
+
+[sub_resource type="FontVariation" id="FontVariation_0r05y"]
+base_font = ExtResource("1_5tvlq")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5tvlq"]
+bg_color = Color(0.8509804, 0.8509804, 0.8509804, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hiun5"]
+bg_color = Color(0.69411767, 0.69411767, 0.69411767, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1qive"]
+bg_color = Color(0.69550276, 0.6955033, 0.6955028, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tm3bt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4o61b"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1qive"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_fppyf"]
+font = ExtResource("1_5tvlq")
+font_size = 200
+font_color = Color(0, 0, 0, 1)
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4o61b")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_8cfie")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 100.0
+offset_top = 386.0
+offset_right = 700.0
+offset_bottom = 914.0
+theme_override_constants/separation = 24
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme = SubResource("Theme_m4627")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_0r05y")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tvlq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hiun5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qive")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_tm3bt")
+text = "Start game"
+
+[node name="Settings" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5tvlq")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tvlq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hiun5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qive")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4o61b")
+text = "Settings"
+
+[node name="Exit" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1_5tvlq")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_5tvlq")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_hiun5")
+theme_override_styles/hover = SubResource("StyleBoxFlat_1qive")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1qive")
+text = "Exit
+"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 109.0
+offset_right = 981.0
+offset_bottom = 514.0
+text = "GEOCLASH
+"
+label_settings = SubResource("LabelSettings_fppyf")
+
+[node name="Ellipse1" type="Sprite2D" parent="."]
+position = Vector2(1325, 909)
+texture = ExtResource("4_1qive")
+
+[node name="Polygon1" type="Sprite2D" parent="."]
+position = Vector2(990, 508)
+texture = ExtResource("5_hiun5")
+
+[node name="Polygon2" type="Sprite2D" parent="."]
+position = Vector2(1731, 586)
+texture = ExtResource("6_ph65b")
+
+[node name="Polygon3" type="Sprite2D" parent="."]
+position = Vector2(1113, 300)
+texture = ExtResource("7_x40ml")
+
+[node name="Polygon4" type="Sprite2D" parent="."]
+position = Vector2(1583, 237)
+texture = ExtResource("8_r265i")
+
+[node name="Polygon5" type="Sprite2D" parent="."]
+position = Vector2(1134, 180)
+texture = ExtResource("9_7kagp")
+
+[node name="Polygon6" type="Sprite2D" parent="."]
+position = Vector2(1307, 343)
+texture = ExtResource("10_stntj")
+
+[node name="Rectangle4" type="Sprite2D" parent="."]
+position = Vector2(1750, 379)
+texture = ExtResource("11_844ar")
+
+[node name="Rectangle6" type="Sprite2D" parent="."]
+position = Vector2(1420, 169)
+texture = ExtResource("12_8otnm")
+
+[node name="Rectangle5" type="Sprite2D" parent="."]
+position = Vector2(1376, 526)
+texture = ExtResource("13_mslvp")

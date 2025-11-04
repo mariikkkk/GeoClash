@@ -1,0 +1,169 @@
+[gd_scene load_steps=12 format=3 uid="uid://maoitev44qna"]
+
+[ext_resource type="Script" uid="uid://pvpkpwf0fas7" path="res://pause.gd" id="1_rsuqp"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_lrl1t"]
+[ext_resource type="Script" uid="uid://c504ghwfpohpj" path="res://restart.gd" id="3_y8aqa"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slkmj"]
+bg_color = Color(0.28, 0.28, 0.28, 0.6627451)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+
+[sub_resource type="LabelSettings" id="LabelSettings_esvbq"]
+font = ExtResource("2_lrl1t")
+font_size = 64
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_uiimq"]
+base_font = ExtResource("2_lrl1t")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yhirb"]
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nee34"]
+bg_color = Color(0.47397572, 0.47397578, 0.4739756, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sokhv"]
+
+[sub_resource type="FontVariation" id="FontVariation_g8yiy"]
+base_font = ExtResource("2_lrl1t")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rsuqp"]
+
+[node name="Pause" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_rsuqp")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_slkmj")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NameLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Pause"
+label_settings = SubResource("LabelSettings_esvbq")
+
+[node name="Resume" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_fonts/font = SubResource("FontVariation_uiimq")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhirb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sokhv")
+text = "Resume
+"
+script = ExtResource("3_y8aqa")
+
+[node name="NameLabel2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Resume"]
+layout_mode = 0
+offset_left = 169.0
+offset_top = 5.0
+offset_right = 355.0
+offset_bottom = 138.0
+size_flags_horizontal = 4
+text = "Resume
+"
+label_settings = SubResource("LabelSettings_esvbq")
+
+[node name="Restart" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_fonts/font = SubResource("FontVariation_uiimq")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhirb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_sokhv")
+text = "Restart"
+script = ExtResource("3_y8aqa")
+
+[node name="NameLabel2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 2.0
+offset_right = 352.0
+offset_bottom = 135.0
+size_flags_horizontal = 4
+text = "Restart
+"
+label_settings = SubResource("LabelSettings_esvbq")
+
+[node name="Quit" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_g8yiy")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_yhirb")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/hover = SubResource("StyleBoxFlat_nee34")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rsuqp")
+text = "Quit"
+
+[node name="NameLabel2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit"]
+layout_mode = 0
+offset_left = 210.0
+offset_top = 2.0
+offset_right = 390.0
+offset_bottom = 135.0
+size_flags_horizontal = 4
+text = "Quit
+"
+label_settings = SubResource("LabelSettings_esvbq")
+
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

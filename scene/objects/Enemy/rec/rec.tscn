@@ -1,0 +1,114 @@
+[gd_scene load_steps=21 format=3 uid="uid://fiew2xwoh0xt"]
+
+[ext_resource type="Script" uid="uid://w2cpnsd8fuea" path="res://scene/objects/Enemy/rec/rec.gd" id="1_car7i"]
+[ext_resource type="PackedScene" uid="uid://mcgwssm11xbq" path="res://scene/components/exp_bottle_drop_component.tscn" id="2_y2dmr"]
+[ext_resource type="PackedScene" uid="uid://cdw671x8skhgy" path="res://scene/components/health_component.tscn" id="3_8snqj"]
+[ext_resource type="PackedScene" uid="uid://cm1qk288p0nb8" path="res://scene/components/hurt_box_component.tscn" id="4_84d3n"]
+[ext_resource type="Texture2D" uid="uid://d2onlfmufnk1i" path="res://scene/objects/chel/Микрочел п1.png" id="5_wmom7"]
+[ext_resource type="Texture2D" uid="uid://5073o4yiqvvs" path="res://scene/objects/chel/Микрочел п2.png" id="6_kgixw"]
+[ext_resource type="Texture2D" uid="uid://dwdjy37ns8ll6" path="res://scene/objects/chel/Микрочел п3.png" id="7_7ofns"]
+[ext_resource type="Texture2D" uid="uid://glx164dn7rw1" path="res://scene/objects/chel/Микрочел п4.png" id="8_0bbvt"]
+[ext_resource type="Texture2D" uid="uid://des2b74jsl8p7" path="res://scene/objects/chel/Микрочел п5.png" id="9_i8fdd"]
+[ext_resource type="Texture2D" uid="uid://dj5l8d0irnjan" path="res://scene/objects/chel/Микрочел п6.png" id="10_f2fsr"]
+[ext_resource type="Texture2D" uid="uid://bpf1bcfh12r01" path="res://scene/objects/chel/Микрочел п7.png" id="11_w6slc"]
+[ext_resource type="Texture2D" uid="uid://bpcfnjcpc42m3" path="res://scene/objects/chel/Микрочел п8.png" id="12_gchs4"]
+[ext_resource type="Texture2D" uid="uid://cfqissfmp6wq4" path="res://scene/objects/chel/Микрочел п9.png" id="13_at405"]
+[ext_resource type="Texture2D" uid="uid://ctq3wjb0xb3ru" path="res://scene/objects/Enemy/rec/rec.png" id="14_hub6g"]
+[ext_resource type="AudioStream" uid="uid://dkpy2xuhl3prp" path="res://resources/sounds/hit_sound.mp3" id="15_car7i"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_770wr"]
+radius = 3.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5bma1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_wmom7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kgixw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7ofns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_0bbvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_i8fdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f2fsr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_w6slc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_gchs4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_at405")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 7.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sl644"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3mhno"]
+radius = 11.0
+
+[sub_resource type="GDScript" id="GDScript_oyx3t"]
+script/source = "extends Sprite2D
+"
+
+[node name="Rec" type="CharacterBody2D" groups=["enemy", "scull"]]
+collision_layer = 0
+script = ExtResource("1_car7i")
+
+[node name="ExpBottleDropComponent" parent="." instance=ExtResource("2_y2dmr")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_8snqj")]
+
+[node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_84d3n")]
+light_mask = 256
+visibility_layer = 512
+health_component = NodePath("../HealthComponent")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_770wr")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+scale = Vector2(0.693169, 0.693169)
+sprite_frames = SubResource("SpriteFrames_5bma1")
+animation = &"idle"
+autoplay = "idle"
+frame_progress = 0.864365
+speed_scale = 2.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_sl644")
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="EnemyHitBox"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_3mhno")
+
+[node name="Rec" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -8)
+scale = Vector2(0.09500004, 0.09500004)
+texture = ExtResource("14_hub6g")
+script = SubResource("GDScript_oyx3t")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("15_car7i")

@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://dnhk25usxwkn3"]
+
+[ext_resource type="Script" uid="uid://dr8cloec1w0sq" path="res://scene/objects/Indicator/indicator_spawn.gd" id="1_lxyca"]
+[ext_resource type="Texture2D" uid="uid://c6amu82jq5c2w" path="res://scene/objects/Indicator/arrow_1.png" id="2_ncbmi"]
+[ext_resource type="Texture2D" uid="uid://bwuruefdqk2hk" path="res://scene/objects/Indicator/arrow_2.png" id="3_gh5m5"]
+[ext_resource type="Texture2D" uid="uid://fuxurfcyut5i" path="res://scene/objects/Indicator/arrow_3.png" id="4_4ckqw"]
+[ext_resource type="Texture2D" uid="uid://dgw1hu5wovwt" path="res://scene/objects/Indicator/arrow_4.png" id="5_msvgd"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rkwlg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ncbmi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_gh5m5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4ckqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_msvgd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 7.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_4f05i"]
+resource_name = "animation"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_rv5p5"]
+_data = {
+&"animation": SubResource("Animation_4f05i")
+}
+
+[node name="Indicator" type="Node2D"]
+script = ExtResource("1_lxyca")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -15)
+scale = Vector2(1.65625, 1.65625)
+sprite_frames = SubResource("SpriteFrames_rkwlg")
+autoplay = "default"
+frame_progress = 0.550918
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_rv5p5")
+}
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

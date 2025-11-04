@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="CompressedTexture2D"
+uid="uid://5jjm6qlxq8ia"
+path="res://.godot/imported/Walk 1(left).png-5d1510f8ce209b344cb97574af110480.ctex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://scene/objects/player/player 2/walk left/Walk 1(left).png"
+dest_files=["res://.godot/imported/Walk 1(left).png-5d1510f8ce209b344cb97574af110480.ctex"]
+
+[params]
+
+compress/mode=0
+compress/high_quality=false
+compress/lossy_quality=0.7
+compress/hdr_compression=1
+compress/normal_map=0
+compress/channel_pack=0
+mipmaps/generate=false
+mipmaps/limit=-1
+roughness/mode=0
+roughness/src_normal=""
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/normal_map_invert_y=false
+process/hdr_as_srgb=false
+process/hdr_clamp_exposure=false
+process/size_limit=0
+detect_3d/compress_to=1
