@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://i5fc3tiydnl5"]
+
+[ext_resource type="Script" uid="uid://cvegydwsxdl1d" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_ability.gd" id="1_ohrga"]
+[ext_resource type="Texture2D" uid="uid://cum1yrn1yp2x0" path="res://scene/abilities/orbital_orb_attack_ability/orb.png" id="1_q8gu3"]
+[ext_resource type="Script" uid="uid://wa8ahta7btl3" path="res://scene/components/hit_box_component.gd" id="2_ohrga"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jar0p"]
+radius = 9.0
+
+[node name="OrbitalAttackAbility" type="Node2D"]
+script = ExtResource("1_ohrga")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.11583334, 0.11583334)
+texture = ExtResource("1_q8gu3")
+
+[node name="HitBoxComponent" type="Area2D" parent="."]
+light_mask = 64
+visibility_layer = 64
+disable_mode = 1
+collision_layer = 4
+collision_mask = 0
+monitoring = false
+script = ExtResource("2_ohrga")
+metadata/_custom_type_script = "uid://wa8ahta7btl3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBoxComponent"]
+light_mask = 64
+visibility_layer = 64
+shape = SubResource("CircleShape2D_jar0p")

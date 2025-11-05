@@ -5,7 +5,7 @@ extends Node
 @export var spawn_indicator: PackedScene
 @export var spawn_delay: float = 2.5
 
-@export var triangle_enabled: bool = false         # можно включить когда захочешь
+@export var triangle_enabled: bool = true         # можно включить когда захочешь
 @export var rec_weight: int = 2
 @export var triangle_weight: int = 1
 

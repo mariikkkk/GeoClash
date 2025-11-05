@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bf8bi424pr4cq"
-path="res://.godot/imported/tri.png-2d02f7fb67d91b4cf561e403f8f10132.ctex"
+uid="uid://cum1yrn1yp2x0"
+path="res://.godot/imported/orb.png-45d9d65fff5332bccea9fe82adf41f3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/abilities/tri.png"
-dest_files=["res://.godot/imported/tri.png-2d02f7fb67d91b4cf561e403f8f10132.ctex"]
+source_file="res://scene/abilities/orbital_orb_attack_ability/orb.png"
+dest_files=["res://.godot/imported/orb.png-45d9d65fff5332bccea9fe82adf41f3f.ctex"]
 
 [params]
 

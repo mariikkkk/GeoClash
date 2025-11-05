@@ -1,11 +1,12 @@
-[gd_scene load_steps=31 format=3 uid="uid://dsodfpc2mypm5"]
+[gd_scene load_steps=32 format=3 uid="uid://dsodfpc2mypm5"]
 
 [ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
+[ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
 [ext_resource type="Script" uid="uid://bpt1c5delgv47" path="res://scene/Manager/exp_manager.gd" id="4_merm0"]
 [ext_resource type="Texture2D" uid="uid://bqcluv1kjcbao" path="res://scene/objects/player/Circ.png" id="24_6skk2"]
 [ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="24_wwrti"]
 [ext_resource type="PackedScene" uid="uid://y2pcjl3o3hag" path="res://scene/objects/Coin/coin_controller.tscn" id="82_ww6ym"]
-[ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/attack_contoller.tscn" id="83_hh468"]
+[ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/sword_attack_ability/attack_contoller.tscn" id="83_hh468"]
 [ext_resource type="Texture2D" uid="uid://bvdc0sd072krs" path="res://scene/objects/player/player 2/idle left/Idle 1(left).png" id="150_2gwp5"]
 [ext_resource type="Texture2D" uid="uid://diiqg52wbm6rt" path="res://scene/objects/player/player 2/idle left/Idle 2(left).png" id="151_t5ikk"]
 [ext_resource type="Texture2D" uid="uid://dpfrm5qec252n" path="res://scene/objects/player/player 2/idle left/Idle 3(left).png" id="152_t4560"]
@@ -127,13 +128,15 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.203922, 0.2, 0.211765, 1)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
 script = ExtResource("1_or8g5")
 
 [node name="AttackManager" type="Node" parent="."]
 
 [node name="AttackContoller" parent="AttackManager" instance=ExtResource("83_hh468")]
+
+[node name="OrbitalAttackController" parent="AttackManager" instance=ExtResource("3_wwrti")]
 
 [node name="ExperienceManager" type="Node" parent="." groups=["experience_manager"]]
 script = ExtResource("4_merm0")
@@ -157,41 +160,43 @@ autoplay = "idle_right"
 speed_scale = 1.5
 
 [node name="PickUpArea" type="Area2D" parent="."]
+position = Vector2(0, -15)
 collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
-position = Vector2(0, -16)
+position = Vector2(0, 15)
 shape = SubResource("CircleShape2D_cspul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
-position = Vector2(0, -15)
 shape = SubResource("CircleShape2D_6skk2")
 
 [node name="PlayerHurtBox" type="Area2D" parent="."]
+position = Vector2(0, -15)
 collision_layer = 0
 collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtBox"]
-position = Vector2(0, -16)
+position = Vector2(0, 15)
 shape = SubResource("CircleShape2D_wwrti")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(24, 4)
 offset_left = -18.0
-offset_top = 1.0
+offset_top = 16.0
 offset_right = 18.0
-offset_bottom = 7.0
+offset_bottom = 22.0
 pivot_offset = Vector2(12, 2)
 theme_override_styles/background = SubResource("StyleBoxFlat_2dxl8")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2xmfc")
 max_value = 1.0
 value = 0.5
 show_percentage = false
+metadata/_edit_use_anchors_ = true
 
 [node name="Circ" type="Sprite2D" parent="."]
-position = Vector2(0, -16.000002)
+position = Vector2(0, -9.536743e-07)
 scale = Vector2(0.15500002, 0.15500002)
 texture = ExtResource("24_6skk2")
 

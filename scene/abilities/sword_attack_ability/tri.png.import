@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bo5yxtj34gio7"
-path="res://.godot/imported/attack_abillity.png-fec57dfe081c6cf75badb1223114bcde.ctex"
+uid="uid://bf8bi424pr4cq"
+path="res://.godot/imported/tri.png-513a3b36818da3b1993a731328a9b768.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://scene/abilities/attack_abillity.png"
-dest_files=["res://.godot/imported/attack_abillity.png-fec57dfe081c6cf75badb1223114bcde.ctex"]
+source_file="res://scene/abilities/sword_attack_ability/tri.png"
+dest_files=["res://.godot/imported/tri.png-513a3b36818da3b1993a731328a9b768.ctex"]
 
 [params]
 

@@ -1,4 +1,4 @@
 extends Node2D
-class_name AttackAbillity
+class_name SwordAttackAbility
 
 @onready var hit_box_component: HitBoxComponent = $HitBoxComponent

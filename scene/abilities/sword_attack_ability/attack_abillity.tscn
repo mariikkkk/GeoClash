@@ -1,8 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://x65elfu45rpt"]
+[gd_scene load_steps=8 format=3 uid="uid://bm2bqoy6eo6gv"]
 
-[ext_resource type="Script" uid="uid://bdw12s6o2pcgd" path="res://scene/abilities/attack_abillity.gd" id="1_cr2n4"]
-[ext_resource type="Texture2D" uid="uid://bf8bi424pr4cq" path="res://scene/abilities/tri.png" id="2_gd5c6"]
-[ext_resource type="PackedScene" uid="uid://bgurd00064yik" path="res://scene/components/hit_box_component.tscn" id="3_1pccb"]
+[ext_resource type="Script" uid="uid://bdw12s6o2pcgd" path="res://scene/abilities/sword_attack_ability/attack_abillity.gd" id="1_103n1"]
+[ext_resource type="Texture2D" uid="uid://bf8bi424pr4cq" path="res://scene/abilities/sword_attack_ability/tri.png" id="2_o2vxr"]
+[ext_resource type="PackedScene" uid="uid://bgurd00064yik" path="res://scene/components/hit_box_component.tscn" id="3_7wg8p"]
 
 [sub_resource type="Animation" id="Animation_sfupg"]
 length = 0.001
@@ -95,13 +95,13 @@ _data = {
 size = Vector2(29, 50)
 
 [node name="AttackAbillity" type="Node2D"]
-script = ExtResource("1_cr2n4")
+script = ExtResource("1_103n1")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-1.1920929e-07, 0)
 rotation = -0.776672
 scale = Vector2(1.37947, 1.37947)
-texture = ExtResource("2_gd5c6")
+texture = ExtResource("2_o2vxr")
 offset = Vector2(7, -7)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -110,7 +110,7 @@ libraries = {
 }
 autoplay = "attack_anim"
 
-[node name="HitBoxComponent" parent="." instance=ExtResource("3_1pccb")]
+[node name="HitBoxComponent" parent="." instance=ExtResource("3_7wg8p")]
 light_mask = 64
 visibility_layer = 64
 disable_mode = 1

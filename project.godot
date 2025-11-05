@@ -33,6 +33,7 @@ window/stretch/aspect="keep_width"
 [global_group]
 
 enemy=""
+player=""
 
 [input]
 
