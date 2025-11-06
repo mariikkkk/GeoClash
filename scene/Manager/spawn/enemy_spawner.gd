@@ -14,13 +14,23 @@ func get_spawn_pos():
 	var directions = [Vector2.RIGHT, Vector2.DOWN, Vector2.LEFT, Vector2.UP].map(func(d): return d.rotated(randf_range(0, PI / 2)))
 	
 	for dir in directions:
-		var distance = randi_range(200, 300)
+		var distance = randi_range(400, 600)
 		var spawn_pos = player.global_position + dir * distance
-		var ray_params = PhysicsRayQueryParameters2D.create(spawn_pos, player.global_position)
-		var intersection = get_tree().root.world_2d.direct_space_state.intersect_ray(ray_params)
-		if intersection.is_empty():
+		var ray_params = PhysicsRayQueryParameters2D.create(
+			spawn_pos,
+			player.global_position
+		)
+		var ray_hit = get_tree().root.world_2d.direct_space_state.intersect_ray(ray_params)
+		if not ray_hit.is_empty():
+			continue
+		var point_params = PhysicsPointQueryParameters2D.new()
+		point_params.position = spawn_pos
+		point_params.collide_with_areas = true
+		point_params.collide_with_bodies = true
+		var point_hit = get_tree().root.world_2d.direct_space_state.intersect_point(point_params)
+		if point_hit.is_empty():
 			return spawn_pos
-	return player.global_position + Vector2.UP * 300
+	return player.global_position
 	
 func _on_timer_timeout():
 	var player = get_tree().get_first_node_in_group("player") as Node2D

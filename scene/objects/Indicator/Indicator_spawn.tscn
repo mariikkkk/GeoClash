@@ -40,6 +40,7 @@ _data = {
 }
 
 [node name="Indicator" type="Node2D"]
+scale = Vector2(2.0094645, 2.1861093)
 script = ExtResource("1_lxyca")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

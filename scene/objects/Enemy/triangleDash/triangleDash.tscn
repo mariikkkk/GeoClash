@@ -17,6 +17,8 @@ radius = 5.0990195
 radius = 11.0
 
 [node name="triangleDash" type="CharacterBody2D" groups=["enemy"]]
+position = Vector2(0, 12)
+scale = Vector2(1.5200005, 1.5199997)
 script = ExtResource("1_uv1dc")
 
 [node name="ExpBottleDropComponent" parent="." instance=ExtResource("4_74uya")]
@@ -46,8 +48,9 @@ position = Vector2(0, -8)
 shape = SubResource("CircleShape2D_mjvjb")
 
 [node name="TriangleDash" type="Sprite2D" parent="."]
-position = Vector2(1.1920929e-07, -8.000001)
-scale = Vector2(0.33, 0.33)
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -7.894745)
+scale = Vector2(0.026162978, 0.026162978)
 texture = ExtResource("2_tit0q")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]

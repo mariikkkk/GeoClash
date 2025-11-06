@@ -5,12 +5,19 @@ extends CharacterBody2D
 @onready var progress_bar = $ProgressBar
 @onready var experience_manager: Node = get_tree().get_first_node_in_group("experience_manager")
 @onready var health_component = $HealthComponent
+@onready var attack_contoller = $AttackManager/AttackContoller
+@onready var sword_trigger_shape = $SwordTrigger/SwordTriggerShape
+@onready var sword_trigger = $SwordTrigger
+
 
 var max_speed = 125
 var acceleration = 0.16
 var enemies_colliding = 0 #количество врагов, которые соприкасаются с персонажем 
 
 func _ready():
+	var circle = sword_trigger_shape.shape as CircleShape2D
+	if circle != null:
+		circle.radius = attack_contoller.attack_range
 	if health_component and experience_manager.has_signal("lvl_up"):
 		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
 	experience_manager.lvl_up.connect(health_component.on_level_up)
@@ -51,3 +58,8 @@ func health_update():
 	progress_bar.value = health_component.get_health_value()
 func on_health_changed():
 	health_update()
+
+
+#func _on_sword_trigger_area_entered(area):
+	#if area.is_in_group("enemy"):
+		#attack_contoller.try_spawn_sword()

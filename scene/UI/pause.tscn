@@ -1,8 +1,8 @@
 [gd_scene load_steps=12 format=3 uid="uid://maoitev44qna"]
 
-[ext_resource type="Script" uid="uid://pvpkpwf0fas7" path="res://pause.gd" id="1_rsuqp"]
+[ext_resource type="Script" uid="uid://pvpkpwf0fas7" path="res://scene/UI/pause.gd" id="1_rsuqp"]
 [ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_lrl1t"]
-[ext_resource type="Script" uid="uid://c504ghwfpohpj" path="res://restart.gd" id="3_y8aqa"]
+[ext_resource type="Script" uid="uid://c504ghwfpohpj" path="res://scene/UI/restart.gd" id="3_y8aqa"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_slkmj"]
 bg_color = Color(0.28, 0.28, 0.28, 0.6627451)

@@ -1,6 +1,6 @@
 [gd_scene load_steps=10 format=3 uid="uid://bak1tkbalvsps"]
 
-[ext_resource type="Script" uid="uid://c3qvdfkq8xjaa" path="res://end_screen.gd" id="1_iyald"]
+[ext_resource type="Script" uid="uid://c3qvdfkq8xjaa" path="res://scene/UI/end_screen.gd" id="1_iyald"]
 [ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_eroqu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4nh"]

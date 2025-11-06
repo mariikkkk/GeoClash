@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 var max_speed = 70
-var max_distance = 600
+var max_distance = 1200
 
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var rec = $Rec

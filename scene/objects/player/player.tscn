@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://dsodfpc2mypm5"]
+[gd_scene load_steps=14 format=3 uid="uid://dsodfpc2mypm5"]
 
 [ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
 [ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
@@ -7,106 +7,6 @@
 [ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="24_wwrti"]
 [ext_resource type="PackedScene" uid="uid://y2pcjl3o3hag" path="res://scene/objects/Coin/coin_controller.tscn" id="82_ww6ym"]
 [ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/sword_attack_ability/attack_contoller.tscn" id="83_hh468"]
-[ext_resource type="Texture2D" uid="uid://bvdc0sd072krs" path="res://scene/objects/player/player 2/idle left/Idle 1(left).png" id="150_2gwp5"]
-[ext_resource type="Texture2D" uid="uid://diiqg52wbm6rt" path="res://scene/objects/player/player 2/idle left/Idle 2(left).png" id="151_t5ikk"]
-[ext_resource type="Texture2D" uid="uid://dpfrm5qec252n" path="res://scene/objects/player/player 2/idle left/Idle 3(left).png" id="152_t4560"]
-[ext_resource type="Texture2D" uid="uid://bo8iqwh6ev2u1" path="res://scene/objects/player/player 2/idle left/Idle 4(left).png" id="153_fjw0k"]
-[ext_resource type="Texture2D" uid="uid://b8lwisw8oe0k1" path="res://scene/objects/player/player 2/idle right/Idle 1(right).png" id="154_gjah7"]
-[ext_resource type="Texture2D" uid="uid://dlkf66r0uelwy" path="res://scene/objects/player/player 2/idle right/Idle 2(right).png" id="155_isvet"]
-[ext_resource type="Texture2D" uid="uid://cvhjhjpphk1cu" path="res://scene/objects/player/player 2/idle right/Idle 3(right).png" id="156_e41ei"]
-[ext_resource type="Texture2D" uid="uid://c5g1sv6ck0e5y" path="res://scene/objects/player/player 2/idle right/Idle 4(right).png" id="157_h347l"]
-[ext_resource type="Texture2D" uid="uid://5jjm6qlxq8ia" path="res://scene/objects/player/player 2/walk left/Walk 1(left).png" id="158_d5hhk"]
-[ext_resource type="Texture2D" uid="uid://7cy6hmb10lom" path="res://scene/objects/player/player 2/walk left/Walk 2(left).png" id="159_gll8o"]
-[ext_resource type="Texture2D" uid="uid://clnbwm1e4e8hn" path="res://scene/objects/player/player 2/walk left/Walk 3(left).png" id="160_qxkys"]
-[ext_resource type="Texture2D" uid="uid://dikxu1yq8oxtr" path="res://scene/objects/player/player 2/walk left/Walk 4(left).png" id="161_20exn"]
-[ext_resource type="Texture2D" uid="uid://dm0glcw41004u" path="res://scene/objects/player/player 2/walk left/Walk 5(left).png" id="162_2bpx5"]
-[ext_resource type="Texture2D" uid="uid://t7d33u7h00rv" path="res://scene/objects/player/player 2/walk right/Walk 1(right).png" id="163_2xjn1"]
-[ext_resource type="Texture2D" uid="uid://qxk1imvm7fi4" path="res://scene/objects/player/player 2/walk right/Walk 2(right).png" id="164_pk6ip"]
-[ext_resource type="Texture2D" uid="uid://bqg1k3ijajq70" path="res://scene/objects/player/player 2/walk right/Walk 3(right).png" id="165_xntba"]
-[ext_resource type="Texture2D" uid="uid://lv537gdfyaai" path="res://scene/objects/player/player 2/walk right/Walk 4(right).png" id="166_1axey"]
-[ext_resource type="Texture2D" uid="uid://pjyyqih4pb82" path="res://scene/objects/player/player 2/walk right/Walk 5(right).png" id="167_pgffd"]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_rwb3n"]
-animations = [{
-"frames": [],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("154_gjah7")
-}, {
-"duration": 1.0,
-"texture": ExtResource("155_isvet")
-}, {
-"duration": 1.0,
-"texture": ExtResource("156_e41ei")
-}, {
-"duration": 1.0,
-"texture": ExtResource("157_h347l")
-}],
-"loop": true,
-"name": &"idle_left",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("150_2gwp5")
-}, {
-"duration": 1.0,
-"texture": ExtResource("151_t5ikk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("152_t4560")
-}, {
-"duration": 1.0,
-"texture": ExtResource("153_fjw0k")
-}],
-"loop": true,
-"name": &"idle_right",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("163_2xjn1")
-}, {
-"duration": 1.0,
-"texture": ExtResource("164_pk6ip")
-}, {
-"duration": 1.0,
-"texture": ExtResource("165_xntba")
-}, {
-"duration": 1.0,
-"texture": ExtResource("166_1axey")
-}, {
-"duration": 1.0,
-"texture": ExtResource("167_pgffd")
-}],
-"loop": true,
-"name": &"walk_left",
-"speed": 7.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("158_d5hhk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("159_gll8o")
-}, {
-"duration": 1.0,
-"texture": ExtResource("160_qxkys")
-}, {
-"duration": 1.0,
-"texture": ExtResource("161_20exn")
-}, {
-"duration": 1.0,
-"texture": ExtResource("162_2bpx5")
-}],
-"loop": true,
-"name": &"walk_right",
-"speed": 7.0
-}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspul"]
 radius = 19.026299
@@ -127,6 +27,8 @@ border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.203922, 0.2, 0.211765, 1)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0qfo"]
 
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
@@ -150,26 +52,19 @@ metadata/_custom_type_script = "uid://bpt1c5delgv47"
 wait_time = 0.2
 one_shot = true
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." groups=["player"]]
-visible = false
-position = Vector2(-1.20371e-35, -28)
-scale = Vector2(1.63594, 1.73592)
-sprite_frames = SubResource("SpriteFrames_rwb3n")
-animation = &"walk_right"
-autoplay = "idle_right"
-speed_scale = 1.5
-
 [node name="PickUpArea" type="Area2D" parent="."]
 position = Vector2(0, -15)
+scale = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
-position = Vector2(0, 15)
+position = Vector2(0, 7.5)
 shape = SubResource("CircleShape2D_cspul")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 2
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_6skk2")
 
 [node name="PlayerHurtBox" type="Area2D" parent="."]
@@ -179,14 +74,15 @@ collision_mask = 16
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerHurtBox"]
 position = Vector2(0, 15)
+scale = Vector2(2, 2)
 shape = SubResource("CircleShape2D_wwrti")
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 custom_minimum_size = Vector2(24, 4)
-offset_left = -18.0
-offset_top = 16.0
-offset_right = 18.0
-offset_bottom = 22.0
+offset_left = -27.0
+offset_top = 33.0
+offset_right = 27.0
+offset_bottom = 42.0
 pivot_offset = Vector2(12, 2)
 theme_override_styles/background = SubResource("StyleBoxFlat_2dxl8")
 theme_override_styles/fill = SubResource("StyleBoxFlat_2xmfc")
@@ -197,13 +93,20 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Circ" type="Sprite2D" parent="."]
 position = Vector2(0, -9.536743e-07)
-scale = Vector2(0.15500002, 0.15500002)
+scale = Vector2(0.31, 0.31)
 texture = ExtResource("24_6skk2")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("24_wwrti")
 metadata/_custom_type_script = "uid://b3ohfy5lvqv71"
 
+[node name="SwordTrigger" type="Area2D" parent="."]
+monitorable = false
+
+[node name="SwordTriggerShape" type="CollisionShape2D" parent="SwordTrigger"]
+shape = SubResource("CircleShape2D_s0qfo")
+
 [connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_exited" from="PlayerHurtBox" to="." method="_on_player_hurtt_box_area_exited"]
+[connection signal="area_entered" from="SwordTrigger" to="." method="_on_sword_trigger_area_entered"]
