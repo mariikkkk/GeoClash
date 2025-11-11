@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=4 uid="uid://d3yqisu6c2f83"]
+[gd_scene load_steps=20 format=4 uid="uid://d3yqisu6c2f83"]
 
 [ext_resource type="PackedScene" uid="uid://cwlh55j06e304" path="res://scene/Manager/spawn/enemy_spawner.tscn" id="1_aiioc"]
 [ext_resource type="Script" uid="uid://clfhbgnqrmxe" path="res://scene/Level/level.gd" id="1_pww6y"]
@@ -9,8 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://duufwkjrembs8" path="res://scene/Manager/upgrade_manager.tscn" id="2_x4mos"]
 [ext_resource type="PackedScene" uid="uid://bcrqvfik2m0sh" path="res://scene/Manager/exp_manager.tscn" id="3_04iej"]
 [ext_resource type="PackedScene" uid="uid://maoitev44qna" path="res://scene/UI/pause.tscn" id="3_ng1xy"]
-[ext_resource type="Script" uid="uid://dmff4gj5g37qo" path="res://resources/upgrades/ability_upgrade.gd" id="3_ov2p5"]
-[ext_resource type="Resource" uid="uid://g6av4pjj57lh" path="res://resources/upgrades/sword_rate.tres" id="4_7x2fd"]
 [ext_resource type="PackedScene" uid="uid://ckh6jbtffyexi" path="res://scene/UI/arena_time_ui.tscn" id="5_ao10f"]
 [ext_resource type="PackedScene" uid="uid://h1jmxpjnrtis" path="res://scene/Manager/arena_time_manager.tscn" id="6_1e2t7"]
 [ext_resource type="Script" uid="uid://dlrqefft1kawf" path="res://scene/Level/camera_2d.gd" id="12_7x2fd"]
@@ -60,9 +58,7 @@ pause_screen_scene = ExtResource("3_ng1xy")
 [node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("5_ao10f")]
 arena_time_manager = NodePath("../ArenaTimeManager")
 
-[node name="UpgradeManager" parent="." node_paths=PackedStringArray("exp_manager") instance=ExtResource("2_x4mos")]
-exp_manager = NodePath("../expManager")
-upgrade_pool = Array[ExtResource("3_ov2p5")]([ExtResource("4_7x2fd")])
+[node name="UpgradeManager" parent="." instance=ExtResource("2_x4mos")]
 
 [node name="ExperienceBar (node, который крепится к камере)" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_qc4j8")]
 experience_manager = NodePath("../expManager")
