@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ws405ssew3p2"]
+
+[ext_resource type="Script" uid="uid://dfjjbgrlcfbqv" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.gd" id="1_gpv08"]
+
+[node name="OrbitalAttackController" type="Node"]
+script = ExtResource("1_gpv08")

@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=3 uid="uid://cwlh55j06e304"]
+
+[ext_resource type="Script" uid="uid://ds7burdbd5aon" path="res://scene/Manager/spawn/enemy_spawner.gd" id="1_kdn2g"]
+[ext_resource type="PackedScene" uid="uid://fiew2xwoh0xt" path="res://scene/objects/Enemy/rec/rec.tscn" id="2_7mecn"]
+[ext_resource type="PackedScene" uid="uid://dnhk25usxwkn3" path="res://scene/objects/Indicator/Indicator_spawn.tscn" id="3_7mecn"]
+[ext_resource type="PackedScene" uid="uid://bj0pulmfha8xd" path="res://scene/objects/Enemy/triangleDash/triangleDash.tscn" id="3_lfnqf"]
+
+[node name="EnemySpawner" type="Node"]
+script = ExtResource("1_kdn2g")
+rec_scene = ExtResource("2_7mecn")
+triangle_scene = ExtResource("3_lfnqf")
+spawn_indicator = ExtResource("3_7mecn")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.4
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,49 @@
+[gd_scene load_steps=8 format=3 uid="uid://cnnl6vw1aw7qi"]
+
+[ext_resource type="Script" uid="uid://csj0s1xobvada" path="res://scene/objects/exp_bottle/exp_bottle.gd" id="1_hkdcu"]
+[ext_resource type="Texture2D" uid="uid://umexwi0n0nxm" path="res://scene/objects/exp_bottle/flasks_2_1.png" id="1_y08ej"]
+[ext_resource type="Texture2D" uid="uid://ci1jxx8ev7lb8" path="res://scene/objects/exp_bottle/flasks_2_2.png" id="2_hkdcu"]
+[ext_resource type="Texture2D" uid="uid://c777akre08gdm" path="res://scene/objects/exp_bottle/flasks_2_3.png" id="3_6fhae"]
+[ext_resource type="Texture2D" uid="uid://cr5fhuqxwsqog" path="res://scene/objects/exp_bottle/flasks_2_4.png" id="4_8pnuq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2e57g"]
+radius = 19.105
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4jwv1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_y08ej")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_hkdcu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_6fhae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8pnuq")
+}],
+"loop": true,
+"name": &"exp",
+"speed": 6.0
+}]
+
+[node name="ExpBottle" type="Node2D"]
+script = ExtResource("1_hkdcu")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_2e57g")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(1.4375, 1.4375)
+sprite_frames = SubResource("SpriteFrames_4jwv1")
+animation = &"exp"
+autoplay = "exp"
+frame_progress = 0.0757028
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
