@@ -1,6 +1,27 @@
-[gd_scene load_steps=2 format=3 uid="uid://duufwkjrembs8"]
+[gd_scene load_steps=12 format=3 uid="uid://duufwkjrembs8"]
 
 [ext_resource type="Script" uid="uid://ba6rnc5vbf2hg" path="res://scene/Manager/upgrade_manager.gd" id="1_mjxw5"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="2_h3kul"]
+[ext_resource type="Resource" uid="uid://l5vaoawb18el" path="res://scene/abilities/ability_upgrade/damage_sword_up_1.tres" id="3_7hvrp"]
+[ext_resource type="Resource" uid="uid://buces8ited8w4" path="res://scene/abilities/ability_upgrade/damage_sword_up_2.tres" id="4_5tvhw"]
+[ext_resource type="Resource" uid="uid://cpsw3pl5ub6n1" path="res://scene/abilities/ability_upgrade/speed_sword.tres" id="5_tvwdl"]
+[ext_resource type="Resource" uid="uid://cp8gex7t52a2y" path="res://scene/abilities/ability_upgrade/max_hp_up.tres" id="7_eodx2"]
+[ext_resource type="Resource" uid="uid://b460ace8rjbnr" path="res://scene/abilities/ability_upgrade/size_sword.tres" id="8_cxcrk"]
+[ext_resource type="Resource" uid="uid://bco5ci55xxlfk" path="res://scene/abilities/ability_upgrade/speed_up.tres" id="8_e6vqp"]
+[ext_resource type="PackedScene" uid="uid://hewpuwk738kd" path="res://scene/UI/upgrade_screen.tscn" id="9_bw4eh"]
+[ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/sword_attack_ability/attack_contoller.tscn" id="9_cxcrk"]
+[ext_resource type="PackedScene" uid="uid://bcrqvfik2m0sh" path="res://scene/Manager/exp_manager.tscn" id="12_2omud"]
 
-[node name="UpgradeManager" type="Node"]
+[node name="UpgradeManager" type="Node" node_paths=PackedStringArray("exp_manager", "upgrade_ui", "sword_attack")]
 script = ExtResource("1_mjxw5")
+exp_manager = NodePath("expManager")
+upgrade_ui = NodePath("UpgradeScreen")
+upgrade_pool = Array[ExtResource("2_h3kul")]([ExtResource("3_7hvrp"), ExtResource("4_5tvhw"), ExtResource("5_tvwdl"), ExtResource("7_eodx2"), ExtResource("8_e6vqp"), ExtResource("8_cxcrk")])
+cards_per_level = null
+sword_attack = NodePath("AttackContoller")
+
+[node name="AttackContoller" parent="." instance=ExtResource("9_cxcrk")]
+
+[node name="UpgradeScreen" parent="." instance=ExtResource("9_bw4eh")]
+
+[node name="expManager" parent="." instance=ExtResource("12_2omud")]

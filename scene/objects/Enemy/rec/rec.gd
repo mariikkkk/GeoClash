@@ -9,7 +9,6 @@ var max_distance = 1200
 
 
 func _ready():
-	health_component.max_health = 10
 	health_component.died.connect(on_died)
 	health_component.damaged.connect(_on_damaged)
 

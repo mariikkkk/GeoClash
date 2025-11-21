@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://b6nci5gedb5o1"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_8hvpo"]
+[ext_resource type="Texture2D" uid="uid://dgqbhvsm0sy7w" path="res://resources/icon/upgrades/sowrd_count_icon.png" id="1_kd0nt"]
+
+[resource]
+script = ExtResource("1_8hvpo")
+id = "sword_count"
+title = "Нужно больше мечей!"
+description = "Увеличивает количество мечей на 1."
+icon = ExtResource("1_kd0nt")
+upgrade_type = "sword_count"
+value = 1.0
+color = Color(0.8235294, 0, 0.9490196, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

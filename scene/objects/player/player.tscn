@@ -96,8 +96,9 @@ position = Vector2(0, -9.536743e-07)
 scale = Vector2(0.31, 0.31)
 texture = ExtResource("24_6skk2")
 
-[node name="HealthComponent" type="Node" parent="."]
+[node name="HealthComponent" type="Node" parent="." node_paths=PackedStringArray("exp_manager")]
 script = ExtResource("24_wwrti")
+exp_manager = NodePath("../ExperienceManager")
 metadata/_custom_type_script = "uid://b3ohfy5lvqv71"
 
 [node name="SwordTrigger" type="Area2D" parent="."]

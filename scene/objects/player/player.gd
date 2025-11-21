@@ -20,13 +20,13 @@ func _ready():
 		circle.radius = attack_contoller.attack_range
 	if health_component and experience_manager.has_signal("lvl_up"):
 		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
-	experience_manager.lvl_up.connect(health_component.on_level_up)
 	health_component.died.connect(on_died)
 	health_component.health_changed.connect(on_health_changed)
 	health_update()
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta): 
 	var direction = movement_vector().normalized()
+	print(health_component.current_health)
 	var target_velocity = max_speed * direction
 	velocity = velocity.lerp(target_velocity, acceleration)
 	move_and_slide()

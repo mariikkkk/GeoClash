@@ -6,6 +6,7 @@
 [node name="AttackContoller" type="Node"]
 script = ExtResource("1_17jl6")
 attack_abillity = ExtResource("2_vcqtl")
+max_swords = 1
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
