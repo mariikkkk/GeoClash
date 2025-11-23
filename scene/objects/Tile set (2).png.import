@@ -18,8 +18,16 @@ dest_files=["res://.godot/imported/Tile set (2).png-6182de2af2d15bf442ae728f06d6
 compress/mode=0
 compress/high_quality=false
 compress/lossy_quality=0.7
+<<<<<<< HEAD
 compress/uastc_level=0
 compress/rdo_quality_loss=0.0
+=======
+<<<<<<< HEAD
+compress/uastc_level=0
+compress/rdo_quality_loss=0.0
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 compress/hdr_compression=1
 compress/normal_map=0
 compress/channel_pack=0
@@ -27,10 +35,19 @@ mipmaps/generate=false
 mipmaps/limit=-1
 roughness/mode=0
 roughness/src_normal=""
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 process/channel_remap/red=0
 process/channel_remap/green=1
 process/channel_remap/blue=2
 process/channel_remap/alpha=3
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/normal_map_invert_y=false

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene load_steps=17 format=3 uid="uid://duufwkjrembs8"]
 
 [ext_resource type="Script" uid="uid://ba6rnc5vbf2hg" path="res://scene/manager/upgrade_manager.gd" id="1_mjxw5"]
@@ -26,3 +27,11 @@ upgrade_pool = Array[ExtResource("2_h3kul")]([ExtResource("3_7hvrp"), ExtResourc
 [node name="UpgradeScreen" parent="." instance=ExtResource("9_bw4eh")]
 
 [node name="expManager" parent="." instance=ExtResource("12_2omud")]
+=======
+[gd_scene load_steps=2 format=3 uid="uid://duufwkjrembs8"]
+
+[ext_resource type="Script" uid="uid://ba6rnc5vbf2hg" path="res://scene/Manager/upgrade_manager.gd" id="1_mjxw5"]
+
+[node name="UpgradeManager" type="Node"]
+script = ExtResource("1_mjxw5")
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

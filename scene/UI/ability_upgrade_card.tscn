@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [gd_scene load_steps=2 format=3 uid="uid://dtv78e5nb05f0"]
 
 [sub_resource type="GDScript" id="GDScript_8irws"]
@@ -15,6 +19,18 @@ func set_ability_upgrade (upgrade:AbilityUpgrade):
 [node name="AbilityUpgradeCard" type="PanelContainer"]
 custom_minimum_size = Vector2(100, 140)
 script = SubResource("GDScript_8irws")
+<<<<<<< HEAD
+=======
+=======
+[gd_scene load_steps=2 format=3 uid="uid://l7aij1yi7203"]
+
+[ext_resource type="Script" uid="uid://xu2vnagerbnq" path="res://scene/UI/ability_upgrade_card.gd" id="1_amg2g"]
+
+[node name="AbilityUpgradeCard" type="PanelContainer"]
+custom_minimum_size = Vector2(100, 140)
+script = ExtResource("1_amg2g")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2

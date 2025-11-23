@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 [gd_scene load_steps=46 format=3 uid="uid://p1vhfdvspivr"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=46 format=3 uid="uid://p1vhfdvspivr"]
+=======
+[gd_scene load_steps=24 format=3 uid="uid://p1vhfdvspivr"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 [ext_resource type="Script" uid="uid://1fg728f08dfy" path="res://scene/menu/main_menu.gd" id="1_4o61b"]
 [ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="1_5tvlq"]
@@ -13,6 +21,10 @@
 [ext_resource type="Texture2D" uid="uid://boiu2v6uahynf" path="res://scene/menu/Rectangle 4.png" id="11_844ar"]
 [ext_resource type="Texture2D" uid="uid://wc75ltvcy4m5" path="res://scene/menu/Rectangle 6.png" id="12_8otnm"]
 [ext_resource type="Texture2D" uid="uid://t1qpo441olx8" path="res://scene/menu/Rectangle 5.png" id="13_mslvp"]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [ext_resource type="Script" uid="uid://b11iyr524fvem" path="res://scene/menu/master_control.gd" id="14_1qive"]
 [ext_resource type="AudioStream" uid="uid://cgbhpskram3qd" path="res://resources/sounds/main_menu.wav" id="14_tm3bt"]
 [ext_resource type="Script" uid="uid://i0fryaidx6td" path="res://scene/menu/display_mode_control.gd" id="15_hiun5"]
@@ -26,12 +38,25 @@
 [ext_resource type="Texture2D" uid="uid://c2byjsgexe6wh" path="res://resources/icon/main_menu/monitor.svg" id="20_mslvp"]
 [ext_resource type="Texture2D" uid="uid://c7d56wkv0tll7" path="res://resources/icon/main_menu/CheckBoxEnab.png" id="21_8cfie"]
 [ext_resource type="Texture2D" uid="uid://bpn1m4lobqc85" path="res://resources/icon/main_menu/CheckBoxDis.png" id="22_m4627"]
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8cfie"]
 bg_color = Color(1, 1, 1, 1)
 
+<<<<<<< HEAD
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4627"]
 
+=======
+<<<<<<< HEAD
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_m4627"]
+
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [sub_resource type="Theme" id="Theme_m4627"]
 default_font = ExtResource("2_tm3bt")
 
@@ -91,6 +116,10 @@ font = ExtResource("1_5tvlq")
 font_size = 200
 font_color = Color(0, 0, 0, 1)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ph65b"]
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 10
@@ -156,6 +185,11 @@ font = ExtResource("1_5tvlq")
 font_size = 32
 font_color = Color(0, 0, 0, 1)
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [node name="MainMenu" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -165,7 +199,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4o61b")
 
+<<<<<<< HEAD
 [node name="Background" type="Panel" parent="."]
+=======
+<<<<<<< HEAD
+[node name="Background" type="Panel" parent="."]
+=======
+[node name="Panel" type="Panel" parent="."]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -174,6 +216,10 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxFlat_8cfie")
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [node name="Figures" type="Panel" parent="."]
 layout_mode = 0
 offset_right = 40.0
@@ -221,6 +267,12 @@ position = Vector2(1376, 526)
 texture = ExtResource("13_mslvp")
 
 [node name="MainButtons" type="VBoxContainer" parent="."]
+<<<<<<< HEAD
+=======
+=======
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 layout_mode = 0
 offset_left = 100.0
 offset_top = 386.0
@@ -228,7 +280,15 @@ offset_right = 700.0
 offset_bottom = 914.0
 theme_override_constants/separation = 24
 
+<<<<<<< HEAD
 [node name="Start" type="Button" parent="MainButtons"]
+=======
+<<<<<<< HEAD
+[node name="Start" type="Button" parent="MainButtons"]
+=======
+[node name="Start" type="Button" parent="VBoxContainer"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 layout_mode = 2
 size_flags_vertical = 3
 theme = SubResource("Theme_m4627")
@@ -244,7 +304,15 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1qive")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_tm3bt")
 text = "Start game"
 
+<<<<<<< HEAD
 [node name="Settings" type="Button" parent="MainButtons"]
+=======
+<<<<<<< HEAD
+[node name="Settings" type="Button" parent="MainButtons"]
+=======
+[node name="Settings" type="Button" parent="VBoxContainer"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -259,7 +327,15 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_1qive")
 theme_override_styles/focus = SubResource("StyleBoxEmpty_4o61b")
 text = "Settings"
 
+<<<<<<< HEAD
 [node name="Exit" type="Button" parent="MainButtons"]
+=======
+<<<<<<< HEAD
+[node name="Exit" type="Button" parent="MainButtons"]
+=======
+[node name="Exit" type="Button" parent="VBoxContainer"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
@@ -275,16 +351,34 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_1qive")
 text = "Exit
 "
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [node name="GameName" type="Label" parent="."]
 layout_mode = 0
 offset_left = 61.0
 offset_top = 109.0
 offset_right = 943.0
+<<<<<<< HEAD
+=======
+=======
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 99.0
+offset_top = 109.0
+offset_right = 981.0
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 offset_bottom = 514.0
 text = "GEOCLASH
 "
 label_settings = SubResource("LabelSettings_fppyf")
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [node name="Options" type="Panel" parent="."]
 layout_mode = 1
 anchors_preset = 8
@@ -520,3 +614,47 @@ bus = &"Music"
 [connection signal="toggled" from="Options/Display/HBoxContainer/DisplayModeControl" to="Options/Display/HBoxContainer/DisplayModeControl" method="_on_toggled"]
 [connection signal="mouse_entered" from="Options/Back" to="." method="_on_back_mouse_entered"]
 [connection signal="pressed" from="Options/Back" to="." method="_on_back_pressed"]
+<<<<<<< HEAD
+=======
+=======
+[node name="Ellipse1" type="Sprite2D" parent="."]
+position = Vector2(1325, 909)
+texture = ExtResource("4_1qive")
+
+[node name="Polygon1" type="Sprite2D" parent="."]
+position = Vector2(990, 508)
+texture = ExtResource("5_hiun5")
+
+[node name="Polygon2" type="Sprite2D" parent="."]
+position = Vector2(1731, 586)
+texture = ExtResource("6_ph65b")
+
+[node name="Polygon3" type="Sprite2D" parent="."]
+position = Vector2(1113, 300)
+texture = ExtResource("7_x40ml")
+
+[node name="Polygon4" type="Sprite2D" parent="."]
+position = Vector2(1583, 237)
+texture = ExtResource("8_r265i")
+
+[node name="Polygon5" type="Sprite2D" parent="."]
+position = Vector2(1134, 180)
+texture = ExtResource("9_7kagp")
+
+[node name="Polygon6" type="Sprite2D" parent="."]
+position = Vector2(1307, 343)
+texture = ExtResource("10_stntj")
+
+[node name="Rectangle4" type="Sprite2D" parent="."]
+position = Vector2(1750, 379)
+texture = ExtResource("11_844ar")
+
+[node name="Rectangle6" type="Sprite2D" parent="."]
+position = Vector2(1420, 169)
+texture = ExtResource("12_8otnm")
+
+[node name="Rectangle5" type="Sprite2D" parent="."]
+position = Vector2(1376, 526)
+texture = ExtResource("13_mslvp")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

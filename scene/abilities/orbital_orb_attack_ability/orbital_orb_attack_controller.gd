@@ -1,10 +1,23 @@
 extends Node
 
 @export var orb_scene: PackedScene
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 @export var orb_count: int = 1
 @export var orbit_radius: float = 80.0
 @export var rotation_speed: float = 6.0
 @export var orb_damage: float = 1
+<<<<<<< HEAD
+=======
+=======
+@export var orb_count: int = 3
+@export var orbit_radius: float = 60.0
+@export var rotation_speed: float = 2.0
+@export var orb_damage: int = 1
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 var _player: Node2D
 var _orbs: Array[OrbAttackAbility] = []
@@ -20,10 +33,29 @@ func _ready():
 		push_warning("Игрок не найден!")
 		return
 	
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 	rebuild_orbs()
 	print("  spawned orbs:", _orbs.size())
 	call_deferred("_update_orb_position")
 
+<<<<<<< HEAD
+=======
+=======
+	for i in orb_count:
+		var orb = orb_scene.instantiate() as OrbAttackAbility
+		_player.call_deferred("add_child", orb)
+		orb.set_damage(orb_damage)
+		print("orb ", i, " parent:", orb.get_parent())
+		_orbs.append(orb)
+		var base_angle := float(i) / float(orb_count) * TAU
+		_base_angles.append(base_angle)
+	print("  spawned orbs:", _orbs.size())
+	call_deferred("_update_orb_position")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 func _process(delta):
 	if _player == null:
 		return
@@ -41,6 +73,10 @@ func _update_orb_position():
 		var offset := Vector2(cos(angle), sin(angle)) * orbit_radius
 		_orbs[i].global_position = center + offset
 		_orbs[i].rotation = angle
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 func rebuild_orbs():
 	print("REBUILD ORBS, orb_count =", orb_count)
@@ -62,3 +98,8 @@ func rebuild_orbs():
 		_base_angles.append(base_angle)
 
 	call_deferred("_update_orb_position")
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

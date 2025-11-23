@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcrqvfik2m0sh"]
+
+[ext_resource type="Script" uid="uid://bpt1c5delgv47" path="res://scene/Manager/exp_manager.gd" id="1_15j1d"]
+[ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="2_o2cuf"]
+
+[node name="expManager" type="Node"]
+script = ExtResource("1_15j1d")
+
+[node name="HealthComponent" type="Node" parent="."]
+script = ExtResource("2_o2cuf")
+metadata/_custom_type_script = "uid://b3ohfy5lvqv71"

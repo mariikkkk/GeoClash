@@ -13,32 +13,64 @@ config_version=5
 config/name="GeoClash"
 run/main_scene="uid://p1vhfdvspivr"
 config/features=PackedStringArray("4.5", "Forward Plus")
+<<<<<<< HEAD
 run/max_fps=165
 boot_splash/bg_color=Color(0.19699031, 0.0004344763, 0.34927943, 1)
 boot_splash/image="uid://jn6td81teymp"
+=======
+<<<<<<< HEAD
+boot_splash/bg_color=Color(0.19699031, 0.0004344763, 0.34927943, 1)
+boot_splash/image="uid://jn6td81teymp"
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 config/icon="res://icon.svg"
 
 [autoload]
 
 Global="*res://scene/global/global.tscn"
+<<<<<<< HEAD
 UISoundManager="*res://scene/manager/ui_sound_manager.tscn"
 GameSoundManager="*res://scene/manager/game_sound_manager.tscn"
+=======
+<<<<<<< HEAD
+UISoundManager="*res://scene/manager/ui_sound_manager.tscn"
+=======
+Exp="*res://scene/Manager/exp_manager.tscn"
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 [display]
 
 window/size/viewport_width=1920
 window/size/viewport_height=1080
+<<<<<<< HEAD
 window/size/mode=3
+=======
+<<<<<<< HEAD
+window/size/mode=3
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 window/size/always_on_top=true
 window/size/window_width_override=1280
 window/size/window_height_override=720
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/gut/plugin.cfg")
 
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [global_group]
 
 enemy=""

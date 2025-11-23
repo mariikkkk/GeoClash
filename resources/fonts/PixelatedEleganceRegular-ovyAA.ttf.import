@@ -21,7 +21,14 @@ msdf_pixel_range=8
 msdf_size=48
 allow_system_fallback=true
 force_autohinter=false
+<<<<<<< HEAD
 modulate_color_glyphs=false
+=======
+<<<<<<< HEAD
+modulate_color_glyphs=false
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 hinting=1
 subpixel_positioning=4
 keep_rounding_remainders=true

@@ -1,4 +1,5 @@
 extends Node
+<<<<<<< HEAD
 class_name UpgradeManager
 
 @export var exp_manager: ExperienceManager
@@ -129,3 +130,25 @@ func _apply_upgrade_effect(upgrade: AbilityUpgrade) -> void:
 			player.increase_pickup_radius(1.0 + upgrade.value)
 		_:
 			print("Upgrade applied: ", upgrade.id, " (type: ", upgrade.upgrade_type, ")")
+=======
+
+#@export var exp_manager: ExperienceManager
+#@export var upgrade_pool: Array[AbilityUpgrade]
+#@export var upgrade_ui
+#
+#func _ready():
+	#exp_manager.lvl_up.connect(on_lvl_up)
+	#
+#func on_lvl_up(current_level):
+	#var chosen_upgrade = upgrade_pool.pick_random() as AbilityUpgrade
+	#if chosen_upgrade == null:
+		#return
+	#var has_upgrade = current_upgrades.has(chosen_upgrade.id)
+	#if !has_upgrade:
+		#current_upgrades[chosen_upgrade.id] = {
+			#"upgrade": chosen_upgrade,
+			#"quantity": 1 #количество апргрейдов
+		#}
+	#else:
+		#current_upgrades[chosen_upgrade.id]["quantity"] += 1
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

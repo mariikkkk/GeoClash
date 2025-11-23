@@ -3,7 +3,14 @@ extends CharacterBody2D
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var health_component = $HealthComponent
 @onready var triangle_dash = $TriangleDash
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 @export var max_speed := 80.0 # Скорость преследования
 @export var dash_speed := 380.0 # Скорость рывка
 @export var dash_trigger_dist := 120.0 # С какого расстояния начинатся подготовка к рвыку
@@ -11,7 +18,14 @@ extends CharacterBody2D
 @export var dash_time := 0.3 # Длительность рывка
 @export var cooldown := 0.6 # Откат после рывка
 @export var rotate_speed := 12.0 # Скорость поворота в рад сек
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 func _ready():
 	health_component.died.connect(on_died)
 	health_component.damaged.connect(_on_damaged)
@@ -27,8 +41,12 @@ func flash_hit():
 	
 func _on_damaged(amount: int) -> void:
 	flash_hit()
+<<<<<<< HEAD
 	GameSoundManager.play_hitting()
 	
+=======
+	audio_stream_player_2d.play()
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 enum State { CHASE, WINDUP, DASH, COOLDOWN }
 var state: State = State.CHASE # Текущее состояние врага
 

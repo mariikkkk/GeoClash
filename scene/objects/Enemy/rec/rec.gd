@@ -3,10 +3,21 @@ extends CharacterBody2D
 var max_speed = 70
 var max_distance = 1200
 
+<<<<<<< HEAD
 @onready var rec = $Rec
 @onready var health_component = $HealthComponent
 
 
+=======
+@onready var audio_stream_player_2d = $AudioStreamPlayer2D
+@onready var rec = $Rec
+@onready var health_component = $HealthComponent
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 func _ready():
 	health_component.died.connect(on_died)
 	health_component.damaged.connect(_on_damaged)
@@ -19,7 +30,11 @@ func flash_hit():
 	
 func _on_damaged(amount: int) -> void:
 	flash_hit()
+<<<<<<< HEAD
 	GameSoundManager.play_hitting()
+=======
+	audio_stream_player_2d.play()
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 	
 	
 func _process(_delta):

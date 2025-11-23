@@ -4,7 +4,14 @@ extends CanvasLayer
 @export var experience_manager: ExperienceManager
 @onready var progress_bar = $MarginContainer/ProgressBar
 var tween: Tween
+<<<<<<< HEAD
 var player: Node2D
+=======
+<<<<<<< HEAD
+var player: Node2D
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 func _ready():
 	tween = create_tween()

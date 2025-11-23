@@ -3,18 +3,47 @@ extends CharacterBody2D
 @onready var camera_2d = $"../Camera2D"
 @onready var grace_period = $GracePeriod
 @onready var progress_bar = $ProgressBar
+<<<<<<< HEAD
 @export var experience_manager: ExperienceManager
 @onready var health_component = $HealthComponent
 @onready var attack_contoller = $AttackManager/AttackContoller
 @onready var pickup_collision = $PickUpArea/PickUpCollision
+=======
+<<<<<<< HEAD
+@export var experience_manager: ExperienceManager
+@onready var health_component = $HealthComponent
+@onready var attack_contoller = $AttackManager/AttackContoller
+=======
+@onready var experience_manager: Node = get_tree().get_first_node_in_group("experience_manager")
+@onready var health_component = $HealthComponent
+@onready var attack_contoller = $AttackManager/AttackContoller
+@onready var sword_trigger_shape = $SwordTrigger/SwordTriggerShape
+@onready var sword_trigger = $SwordTrigger
+
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 var max_speed = 125
 var acceleration = 0.16
 var enemies_colliding = 0 #количество врагов, которые соприкасаются с персонажем 
 
 func _ready():
+<<<<<<< HEAD
 	if health_component and experience_manager.has_signal("lvl_up"):
 		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
+=======
+<<<<<<< HEAD
+	if health_component and experience_manager.has_signal("lvl_up"):
+		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
+=======
+	var circle = sword_trigger_shape.shape as CircleShape2D
+	if circle != null:
+		circle.radius = attack_contoller.attack_range
+	if health_component and experience_manager.has_signal("lvl_up"):
+		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
+	experience_manager.lvl_up.connect(health_component.on_level_up)
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 	health_component.died.connect(on_died)
 	health_component.health_changed.connect(on_health_changed)
 	health_update()
@@ -25,12 +54,15 @@ func _process(_delta):
 	velocity = velocity.lerp(target_velocity, acceleration)
 	move_and_slide()
 
+<<<<<<< HEAD
 func increase_pickup_radius(mult: float) -> void:
 	var circle := pickup_collision.shape as CircleShape2D
 	if circle == null:
 		return
 	circle.radius *= mult
 
+=======
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 func movement_vector():
 	var movement_x = Input.get_action_strength("move_right_up") - Input.get_action_strength("move_left_up")
 	var movement_y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
@@ -39,7 +71,11 @@ func movement_vector():
 
 func _on_player_hurt_box_area_entered(area):
 	enemies_colliding += 1
+<<<<<<< HEAD
 	camera_2d.shake(0.08)   
+=======
+	camera_2d.shake(0.08)   # 0.08 секунд лёгкой встряски
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 	check_if_damaged()
 
 
@@ -51,6 +87,7 @@ func check_if_damaged():
 		return
 	health_component.take_damage(1)
 	grace_period.start()
+<<<<<<< HEAD
 
 func on_died():
 	queue_free()
@@ -60,3 +97,20 @@ func health_update():
 	
 func on_health_changed():
 	health_update()
+=======
+	
+func on_died():
+	queue_free()
+func health_update():
+	progress_bar.value = health_component.get_health_value()
+func on_health_changed():
+	health_update()
+<<<<<<< HEAD
+=======
+
+
+#func _on_sword_trigger_area_entered(area):
+	#if area.is_in_group("enemy"):
+		#attack_contoller.try_spawn_sword()
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

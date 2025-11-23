@@ -6,3 +6,13 @@
 [node name="OrbitalAttackController" type="Node"]
 script = ExtResource("1_gpv08")
 orb_scene = ExtResource("2_pvf0k")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+orb_count = 0
+orbit_radius = 80.0
+rotation_speed = 6.0
+orb_damage = 5
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

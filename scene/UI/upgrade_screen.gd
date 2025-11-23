@@ -1,5 +1,9 @@
 extends CanvasLayer
 class_name UpgradeScreen
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 @export var card_scene: PackedScene   
 
@@ -26,3 +30,8 @@ func show_cards(upgrades: Array[AbilityUpgrade]) -> void:
 
 func _on_card_selected(upgrade: AbilityUpgrade) -> void:
 	emit_signal("card_chosen", upgrade)
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d

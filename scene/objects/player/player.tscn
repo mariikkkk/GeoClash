@@ -1,9 +1,27 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://dsodfpc2mypm5"]
 
 [ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
 [ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
 [ext_resource type="Texture2D" uid="uid://bqcluv1kjcbao" path="res://scene/objects/player/Circ.png" id="24_6skk2"]
 [ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="24_wwrti"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=12 format=3 uid="uid://dsodfpc2mypm5"]
+
+[ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
+[ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
+=======
+[gd_scene load_steps=14 format=3 uid="uid://dsodfpc2mypm5"]
+
+[ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
+[ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
+[ext_resource type="Script" uid="uid://bpt1c5delgv47" path="res://scene/Manager/exp_manager.gd" id="4_merm0"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+[ext_resource type="Texture2D" uid="uid://bqcluv1kjcbao" path="res://scene/objects/player/Circ.png" id="24_6skk2"]
+[ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="24_wwrti"]
+[ext_resource type="PackedScene" uid="uid://y2pcjl3o3hag" path="res://scene/objects/Coin/coin_controller.tscn" id="82_ww6ym"]
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/sword_attack_ability/attack_contoller.tscn" id="83_hh468"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_cspul"]
@@ -26,6 +44,14 @@ border_width_right = 1
 border_width_bottom = 1
 border_color = Color(0.203922, 0.2, 0.211765, 1)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+[sub_resource type="CircleShape2D" id="CircleShape2D_s0qfo"]
+
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 [node name="player" type="CharacterBody2D" groups=["player"]]
 collision_layer = 0
 script = ExtResource("1_or8g5")
@@ -33,10 +59,29 @@ script = ExtResource("1_or8g5")
 [node name="AttackManager" type="Node" parent="."]
 
 [node name="AttackContoller" parent="AttackManager" instance=ExtResource("83_hh468")]
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 sword_damage = 8
 
 [node name="OrbitalAttackController" parent="AttackManager" instance=ExtResource("3_wwrti")]
 orb_damage = 2.0
+<<<<<<< HEAD
+=======
+=======
+
+[node name="OrbitalAttackController" parent="AttackManager" instance=ExtResource("3_wwrti")]
+
+[node name="ExperienceManager" type="Node" parent="." groups=["experience_manager"]]
+script = ExtResource("4_merm0")
+metadata/_custom_type_script = "uid://bpt1c5delgv47"
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+
+[node name="CoinManager" type="Node" parent="."]
+
+[node name="CoinController" parent="CoinManager" groups=["player"] instance=ExtResource("82_ww6ym")]
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 
 [node name="GracePeriod" type="Timer" parent="."]
 wait_time = 0.2
@@ -48,7 +93,11 @@ scale = Vector2(2, 2)
 collision_layer = 8
 collision_mask = 0
 
+<<<<<<< HEAD
 [node name="PickUpCollision" type="CollisionShape2D" parent="PickUpArea"]
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpArea"]
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 position = Vector2(0, 7.5)
 shape = SubResource("CircleShape2D_cspul")
 
@@ -88,9 +137,30 @@ texture = ExtResource("24_6skk2")
 
 [node name="HealthComponent" type="Node" parent="."]
 script = ExtResource("24_wwrti")
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
 max_health = 60.0
 metadata/_custom_type_script = "uid://b3ohfy5lvqv71"
 
 [connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
 [connection signal="area_exited" from="PlayerHurtBox" to="." method="_on_player_hurtt_box_area_exited"]
+<<<<<<< HEAD
+=======
+=======
+metadata/_custom_type_script = "uid://b3ohfy5lvqv71"
+
+[node name="SwordTrigger" type="Area2D" parent="."]
+monitorable = false
+
+[node name="SwordTriggerShape" type="CollisionShape2D" parent="SwordTrigger"]
+shape = SubResource("CircleShape2D_s0qfo")
+
+[connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
+[connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]
+[connection signal="area_exited" from="PlayerHurtBox" to="." method="_on_player_hurtt_box_area_exited"]
+[connection signal="area_entered" from="SwordTrigger" to="." method="_on_sword_trigger_area_entered"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
+>>>>>>> 3cea586b7d62fc6afe81fb11625c8fbf2d382d7d
