@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4au4it33akv6"]
+
+[ext_resource type="Script" uid="uid://npms1bcut1xi" path="res://scene/abilities/sword_attack_ability/attack_contoller.gd" id="1_17jl6"]
+[ext_resource type="PackedScene" uid="uid://bm2bqoy6eo6gv" path="res://scene/abilities/sword_attack_ability/attack_abillity.tscn" id="2_vcqtl"]
+
+[node name="AttackContoller" type="Node"]
+script = ExtResource("1_17jl6")
+attack_abillity = ExtResource("2_vcqtl")
+max_swords = 1
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

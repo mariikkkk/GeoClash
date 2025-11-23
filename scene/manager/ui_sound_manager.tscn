@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://ccrlfq6sre8xh"]
+
+[ext_resource type="Script" uid="uid://dab0ff5kc74p1" path="res://scene/manager/ui_sound_manager.gd" id="1_ud1si"]
+[ext_resource type="AudioStream" uid="uid://d3a4kdraqnu1o" path="res://resources/sounds/main_menu/click1.wav" id="2_fbwsj"]
+[ext_resource type="AudioStream" uid="uid://c0fybllbg3xqc" path="res://resources/sounds/main_menu/switch15.wav" id="3_a66sl"]
+[ext_resource type="AudioStream" uid="uid://fdx62qxnk5ae" path="res://resources/sounds/main_menu/switch36.wav" id="4_fbwsj"]
+
+[node name="UiSoundManager" type="Node"]
+script = ExtResource("1_ud1si")
+
+[node name="HoverButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_fbwsj")
+volume_db = 13.0
+bus = &"SFX"
+
+[node name="ClickButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_a66sl")
+volume_db = 13.0
+bus = &"SFX"
+
+[node name="SwitchButton" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_fbwsj")
+volume_db = 13.0
+bus = &"SFX"

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://b460ace8rjbnr"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_eud6x"]
+[ext_resource type="Texture2D" uid="uid://x45yi4rpu7ut" path="res://resources/icon/upgrades/size_sword_icon.png" id="1_gigmq"]
+
+[resource]
+script = ExtResource("1_eud6x")
+id = "size_sword"
+title = "Размер имеет значение?"
+description = "Увеличивает размер вашего меча на 5%"
+icon = ExtResource("1_gigmq")
+upgrade_type = "size"
+value = 0.05
+color = Color(0.8250334, 0.0015407616, 0.94987494, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"
