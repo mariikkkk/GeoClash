@@ -3,7 +3,10 @@ extends CharacterBody2D
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var health_component = $HealthComponent
 @onready var triangle_dash = $TriangleDash
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 @export var max_speed := 80.0 # Скорость преследования
 @export var dash_speed := 380.0 # Скорость рывка
 @export var dash_trigger_dist := 120.0 # С какого расстояния начинатся подготовка к рвыку
@@ -11,7 +14,10 @@ extends CharacterBody2D
 @export var dash_time := 0.3 # Длительность рывка
 @export var cooldown := 0.6 # Откат после рывка
 @export var rotate_speed := 12.0 # Скорость поворота в рад сек
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 func _ready():
 	health_component.died.connect(on_died)
 	health_component.damaged.connect(_on_damaged)

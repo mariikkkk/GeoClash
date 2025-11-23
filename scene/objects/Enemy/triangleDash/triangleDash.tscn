@@ -24,7 +24,10 @@ script = ExtResource("1_uv1dc")
 [node name="ExpBottleDropComponent" parent="." instance=ExtResource("4_74uya")]
 
 [node name="HealthComponent" parent="." instance=ExtResource("3_mjvjb")]
+<<<<<<< HEAD
 max_health = 5.0
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("5_agrvn")]
 light_mask = 256
@@ -56,4 +59,7 @@ texture = ExtResource("2_tit0q")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_tit0q")
+<<<<<<< HEAD
 bus = &"SFX"
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b

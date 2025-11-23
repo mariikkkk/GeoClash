@@ -6,8 +6,11 @@ var max_distance = 1200
 @onready var audio_stream_player_2d = $AudioStreamPlayer2D
 @onready var rec = $Rec
 @onready var health_component = $HealthComponent
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 func _ready():
 	health_component.died.connect(on_died)
 	health_component.damaged.connect(_on_damaged)

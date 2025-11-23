@@ -1,6 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://m6cu1841ideb"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://veikuyn8n6p5" path="res://scene/UI/card_button.gd" id="1_2wpkp"]
+=======
+[ext_resource type="Texture2D" uid="uid://j886anvdlbhi" path="res://scene/UI/SwordUpgradeIcon.png" id="1_2fbdp"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 [ext_resource type="FontFile" uid="uid://cir8edp60gelx" path="res://resources/fonts/EpilepsySansBold.ttf" id="2_2fbdp"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2wpkp"]
@@ -9,6 +13,10 @@ border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
+<<<<<<< HEAD
+=======
+border_color = Color(0, 0, 0, 1)
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
@@ -43,7 +51,10 @@ offset_bottom = 4.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_2wpkp")
+<<<<<<< HEAD
 script = ExtResource("1_2wpkp")
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [node name="MarginContainer" type="MarginContainer" parent="."]
 layout_mode = 1
@@ -67,6 +78,10 @@ custom_minimum_size = Vector2(128, 128)
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 6
+<<<<<<< HEAD
+=======
+texture = ExtResource("1_2fbdp")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 expand_mode = 1
 
 [node name="MarginContainer" type="MarginContainer" parent="MarginContainer/VBoxContainer"]
@@ -90,6 +105,10 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2fbdp")
 theme_override_font_sizes/font_size = 22
 theme_override_styles/normal = SubResource("StyleBoxFlat_2fbdp")
+<<<<<<< HEAD
+=======
+text = "Больше Урона!"
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -100,5 +119,9 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_2fbdp")
 theme_override_font_sizes/font_size = 20
 theme_override_styles/normal = SubResource("StyleBoxFlat_4roao")
+<<<<<<< HEAD
+=======
+text = "Увеличьте урон вашего меча на 1 единицу"
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 horizontal_alignment = 1
 autowrap_mode = 3

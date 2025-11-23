@@ -1,25 +1,36 @@
+<<<<<<< HEAD
 [gd_scene load_steps=11 format=3 uid="uid://bak1tkbalvsps"]
+=======
+[gd_scene load_steps=10 format=3 uid="uid://bak1tkbalvsps"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [ext_resource type="Script" uid="uid://c3qvdfkq8xjaa" path="res://scene/UI/end_screen.gd" id="1_iyald"]
 [ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_eroqu"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4nh"]
+<<<<<<< HEAD
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 5
 border_width_top = 5
 border_width_right = 5
 border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
+=======
+bg_color = Color(0.28, 0.28, 0.28, 0.6627451)
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 corner_radius_top_left = 12
 corner_radius_top_right = 12
 corner_radius_bottom_right = 12
 corner_radius_bottom_left = 12
+<<<<<<< HEAD
 shadow_size = 16
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssjoa"]
 bg_color = Color(0.6, 0.6, 0.6, 0)
 border_width_bottom = 5
 border_color = Color(0, 0, 0, 1)
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [sub_resource type="LabelSettings" id="LabelSettings_lp4nh"]
 font = ExtResource("2_eroqu")
@@ -93,10 +104,16 @@ theme_override_constants/separation = 30
 
 [node name="NameLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
+<<<<<<< HEAD
 theme_override_styles/normal = SubResource("StyleBoxFlat_ssjoa")
 text = "Game over"
 label_settings = SubResource("LabelSettings_lp4nh")
 horizontal_alignment = 1
+=======
+size_flags_horizontal = 4
+text = "Game over"
+label_settings = SubResource("LabelSettings_lp4nh")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [node name="Restart" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
@@ -145,7 +162,11 @@ text = "Quit
 "
 label_settings = SubResource("LabelSettings_lp4nh")
 
+<<<<<<< HEAD
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_mouse_entered"]
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
 [connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
+=======
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 [connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

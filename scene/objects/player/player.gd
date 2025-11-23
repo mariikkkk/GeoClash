@@ -3,17 +3,35 @@ extends CharacterBody2D
 @onready var camera_2d = $"../Camera2D"
 @onready var grace_period = $GracePeriod
 @onready var progress_bar = $ProgressBar
+<<<<<<< HEAD
 @export var experience_manager: ExperienceManager
 @onready var health_component = $HealthComponent
 @onready var attack_contoller = $AttackManager/AttackContoller
+=======
+@onready var experience_manager: Node = get_tree().get_first_node_in_group("experience_manager")
+@onready var health_component = $HealthComponent
+@onready var attack_contoller = $AttackManager/AttackContoller
+@onready var sword_trigger_shape = $SwordTrigger/SwordTriggerShape
+@onready var sword_trigger = $SwordTrigger
+
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 var max_speed = 125
 var acceleration = 0.16
 var enemies_colliding = 0 #количество врагов, которые соприкасаются с персонажем 
 
 func _ready():
+<<<<<<< HEAD
 	if health_component and experience_manager.has_signal("lvl_up"):
 		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
+=======
+	var circle = sword_trigger_shape.shape as CircleShape2D
+	if circle != null:
+		circle.radius = attack_contoller.attack_range
+	if health_component and experience_manager.has_signal("lvl_up"):
+		experience_manager.lvl_up.connect(Callable(health_component, "on_level_up"))
+	experience_manager.lvl_up.connect(health_component.on_level_up)
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 	health_component.died.connect(on_died)
 	health_component.health_changed.connect(on_health_changed)
 	health_update()
@@ -51,3 +69,11 @@ func health_update():
 	progress_bar.value = health_component.get_health_value()
 func on_health_changed():
 	health_update()
+<<<<<<< HEAD
+=======
+
+
+#func _on_sword_trigger_area_entered(area):
+	#if area.is_in_group("enemy"):
+		#attack_contoller.try_spawn_sword()
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b

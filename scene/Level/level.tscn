@@ -1,11 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=22 format=4 uid="uid://d3yqisu6c2f83"]
 
 [ext_resource type="PackedScene" uid="uid://cwlh55j06e304" path="res://scene/manager/spawn/enemy_spawner.tscn" id="1_aiioc"]
+=======
+[gd_scene load_steps=20 format=4 uid="uid://d3yqisu6c2f83"]
+
+[ext_resource type="PackedScene" uid="uid://cwlh55j06e304" path="res://scene/Manager/spawn/enemy_spawner.tscn" id="1_aiioc"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 [ext_resource type="Script" uid="uid://clfhbgnqrmxe" path="res://scene/Level/level.gd" id="1_pww6y"]
 [ext_resource type="TileSet" uid="uid://dxl217ait6kbk" path="res://resources/world.tres" id="1_qnfw5"]
 [ext_resource type="PackedScene" uid="uid://bak1tkbalvsps" path="res://scene/UI/end_screen.tscn" id="2_2gi1k"]
 [ext_resource type="PackedScene" uid="uid://dsodfpc2mypm5" path="res://scene/objects/player/player.tscn" id="2_5homi"]
 [ext_resource type="PackedScene" uid="uid://qil2otuqm2th" path="res://scene/UI/experience_bar_(node,_который_крепится_к_камере).tscn" id="2_qc4j8"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://duufwkjrembs8" path="res://scene/manager/upgrade_manager.tscn" id="2_x4mos"]
 [ext_resource type="PackedScene" uid="uid://maoitev44qna" path="res://scene/UI/pause.tscn" id="3_ng1xy"]
 [ext_resource type="PackedScene" uid="uid://ckh6jbtffyexi" path="res://scene/UI/arena_time_ui.tscn" id="5_ao10f"]
@@ -15,6 +22,15 @@
 [ext_resource type="Texture2D" uid="uid://0jo4en0cyqfk" path="res://scene/Level/Tile set (2).png" id="14_pww6y"]
 [ext_resource type="AudioStream" uid="uid://cmmh2y0ocjk7q" path="res://resources/sounds/background.mp3" id="15_2gi1k"]
 [ext_resource type="Script" uid="uid://d28tli4tk2o6o" path="res://scene/Level/background.gd" id="16_ng1xy"]
+=======
+[ext_resource type="PackedScene" uid="uid://duufwkjrembs8" path="res://scene/Manager/upgrade_manager.tscn" id="2_x4mos"]
+[ext_resource type="PackedScene" uid="uid://bcrqvfik2m0sh" path="res://scene/Manager/exp_manager.tscn" id="3_04iej"]
+[ext_resource type="PackedScene" uid="uid://maoitev44qna" path="res://scene/UI/pause.tscn" id="3_ng1xy"]
+[ext_resource type="PackedScene" uid="uid://ckh6jbtffyexi" path="res://scene/UI/arena_time_ui.tscn" id="5_ao10f"]
+[ext_resource type="PackedScene" uid="uid://h1jmxpjnrtis" path="res://scene/Manager/arena_time_manager.tscn" id="6_1e2t7"]
+[ext_resource type="Script" uid="uid://dlrqefft1kawf" path="res://scene/Level/camera_2d.gd" id="12_7x2fd"]
+[ext_resource type="Texture2D" uid="uid://0jo4en0cyqfk" path="res://scene/Level/Tile set (2).png" id="14_pww6y"]
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npafy"]
 size = Vector2(4370, 745)
@@ -63,10 +79,19 @@ arena_time_manager = NodePath("../ArenaTimeManager")
 [node name="UpgradeManager" parent="." instance=ExtResource("2_x4mos")]
 
 [node name="ExperienceBar (node, который крепится к камере)" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_qc4j8")]
+<<<<<<< HEAD
 experience_manager = NodePath("../ExperienceManager")
 
 [node name="ArenaTimeManager" parent="." instance=ExtResource("6_1e2t7")]
 
+=======
+experience_manager = NodePath("../expManager")
+
+[node name="ArenaTimeManager" parent="." instance=ExtResource("6_1e2t7")]
+
+[node name="expManager" parent="." instance=ExtResource("3_04iej")]
+
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
 [node name="EnemySpawner" parent="." instance=ExtResource("1_aiioc")]
 
 [node name="floor" type="TileMapLayer" parent="."]
@@ -104,6 +129,7 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 script = ExtResource("12_7x2fd")
 
+<<<<<<< HEAD
 [node name="player" parent="." node_paths=PackedStringArray("experience_manager") groups=["back_layer"] instance=ExtResource("2_5homi")]
 position = Vector2(295, 204)
 experience_manager = NodePath("../ExperienceManager")
@@ -121,3 +147,10 @@ volume_db = 13.0
 autoplay = true
 bus = &"Music"
 script = ExtResource("16_ng1xy")
+=======
+[node name="player" parent="." groups=["back_layer"] instance=ExtResource("2_5homi")]
+position = Vector2(295, 204)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_set = SubResource("TileSet_ng1xy")
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b

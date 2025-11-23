@@ -140,4 +140,7 @@ position = Vector2(14.5, -5)
 shape = SubResource("RectangleShape2D_462ar")
 
 [node name="Sword_hit" type="AudioStreamPlayer2D" parent="."]
+<<<<<<< HEAD
 bus = &"SFX"
+=======
+>>>>>>> 5b609378e69c6b6751622eae0fa1f93e53bec63b
