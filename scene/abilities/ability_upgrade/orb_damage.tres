@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://du4dljsqinixg"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_66o24"]
+[ext_resource type="Texture2D" uid="uid://cuycjq0bip36s" path="res://resources/icon/upgrades/orb_attack_icon.png" id="1_0228m"]
+
+[resource]
+script = ExtResource("1_66o24")
+id = "orb_damage"
+title = "Сферы сильнее!"
+description = "Увеличивает силу атаки сферы на 1."
+icon = ExtResource("1_0228m")
+upgrade_type = "orb_damage"
+value = 1.0
+color = Color(0.78039217, 0.78431374, 0, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

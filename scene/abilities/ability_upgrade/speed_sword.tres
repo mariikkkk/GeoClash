@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cpsw3pl5ub6n1"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_0ont7"]
+[ext_resource type="Texture2D" uid="uid://j886anvdlbhi" path="res://resources/icon/upgrades/SwordUpgradeIcon.png" id="1_r7i8l"]
+
+[resource]
+script = ExtResource("1_0ont7")
+id = "speed_sword"
+title = "Бей быстрее!"
+description = "Уменьшает время перезарядки атаки мечом на 10%."
+icon = ExtResource("1_r7i8l")
+upgrade_type = "speed_attack"
+value = 0.1
+color = Color(1.540184e-06, 0.6207561, 0.5520339, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

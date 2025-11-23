@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://8b34li3fyw57"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_8hijt"]
+[ext_resource type="Texture2D" uid="uid://76jdgkqgekjf" path="res://resources/icon/upgrades/magnet_icon.png" id="1_kg73q"]
+
+[resource]
+script = ExtResource("1_8hijt")
+id = "pick_up"
+title = "Руки загребуки!"
+description = "Увеличивает зону подбора."
+icon = ExtResource("1_kg73q")
+upgrade_type = "pick_up"
+value = 0.2
+color = Color(0, 0.6002157, 0.69291323, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

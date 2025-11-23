@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cyoc8ejrotir"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_414s7"]
+[ext_resource type="Texture2D" uid="uid://igmk6h1l3poa" path="res://resources/icon/upgrades/orb_speed_icon.png" id="1_hsvkn"]
+
+[resource]
+script = ExtResource("1_414s7")
+id = "orb_speed"
+title = "Быстрая сфера"
+description = "Увеличивает скорость вращения сфер на 15%"
+icon = ExtResource("1_hsvkn")
+upgrade_type = "orb_speed"
+value = 0.15
+color = Color(0.7814583, 0.7838611, 3.85046e-07, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

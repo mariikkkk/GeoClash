@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://xwr2il6wmb51"]
+
+[ext_resource type="Texture2D" uid="uid://j886anvdlbhi" path="res://resources/icon/upgrades/SwordUpgradeIcon.png" id="1_i5chg"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_nsish"]
+
+[resource]
+script = ExtResource("1_nsish")
+id = "sword_range"
+title = "Нужно бить еще дальше!"
+description = "Увеличивает радиус атаки мечом на 5%"
+icon = ExtResource("1_i5chg")
+upgrade_type = "sword_range"
+value = 0.05
+color = Color(0.8235294, 0, 0.9490196, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

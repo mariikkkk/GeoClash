@@ -1,0 +1,28 @@
+[gd_scene load_steps=17 format=3 uid="uid://duufwkjrembs8"]
+
+[ext_resource type="Script" uid="uid://ba6rnc5vbf2hg" path="res://scene/manager/upgrade_manager.gd" id="1_mjxw5"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="2_h3kul"]
+[ext_resource type="Resource" uid="uid://l5vaoawb18el" path="res://scene/abilities/ability_upgrade/damage_sword_up_1.tres" id="3_7hvrp"]
+[ext_resource type="Resource" uid="uid://buces8ited8w4" path="res://scene/abilities/ability_upgrade/damage_sword_up_2.tres" id="4_5tvhw"]
+[ext_resource type="Resource" uid="uid://cpsw3pl5ub6n1" path="res://scene/abilities/ability_upgrade/speed_sword.tres" id="5_tvwdl"]
+[ext_resource type="Resource" uid="uid://cp8gex7t52a2y" path="res://scene/abilities/ability_upgrade/max_hp_up.tres" id="7_eodx2"]
+[ext_resource type="Resource" uid="uid://b460ace8rjbnr" path="res://scene/abilities/ability_upgrade/size_sword.tres" id="8_cxcrk"]
+[ext_resource type="Resource" uid="uid://bco5ci55xxlfk" path="res://scene/abilities/ability_upgrade/speed_up.tres" id="8_e6vqp"]
+[ext_resource type="PackedScene" uid="uid://hewpuwk738kd" path="res://scene/UI/upgrade_screen.tscn" id="9_bw4eh"]
+[ext_resource type="Resource" uid="uid://f3givhwkdvv6" path="res://scene/abilities/ability_upgrade/orb_count.tres" id="9_tvwdl"]
+[ext_resource type="Resource" uid="uid://b6nci5gedb5o1" path="res://scene/abilities/ability_upgrade/sword_count.tres" id="10_cekcp"]
+[ext_resource type="Resource" uid="uid://xwr2il6wmb51" path="res://scene/abilities/ability_upgrade/sword_range.tres" id="11_eodx2"]
+[ext_resource type="PackedScene" uid="uid://bcrqvfik2m0sh" path="res://scene/manager/exp_manager.tscn" id="12_2omud"]
+[ext_resource type="Resource" uid="uid://cyoc8ejrotir" path="res://scene/abilities/ability_upgrade/orb_speed.tres" id="12_lk8rs"]
+[ext_resource type="Resource" uid="uid://du4dljsqinixg" path="res://scene/abilities/ability_upgrade/orb_damage.tres" id="13_22tys"]
+[ext_resource type="Resource" uid="uid://8b34li3fyw57" path="res://scene/abilities/ability_upgrade/pick_up_area.tres" id="14_lk8rs"]
+
+[node name="UpgradeManager" type="Node" node_paths=PackedStringArray("exp_manager", "upgrade_ui")]
+script = ExtResource("1_mjxw5")
+exp_manager = NodePath("expManager")
+upgrade_ui = NodePath("UpgradeScreen")
+upgrade_pool = Array[ExtResource("2_h3kul")]([ExtResource("3_7hvrp"), ExtResource("4_5tvhw"), ExtResource("5_tvwdl"), ExtResource("7_eodx2"), ExtResource("8_e6vqp"), ExtResource("8_cxcrk"), ExtResource("9_tvwdl"), ExtResource("10_cekcp"), ExtResource("11_eodx2"), ExtResource("12_lk8rs"), ExtResource("13_22tys"), ExtResource("14_lk8rs")])
+
+[node name="UpgradeScreen" parent="." instance=ExtResource("9_bw4eh")]
+
+[node name="expManager" parent="." instance=ExtResource("12_2omud")]

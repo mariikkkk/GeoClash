@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://bd274vmmjkfps"]
+
+[ext_resource type="Script" uid="uid://cxwnoy73mfxy0" path="res://scene/manager/game_sound_manager.gd" id="1_tw87m"]
+[ext_resource type="AudioStream" uid="uid://dkpy2xuhl3prp" path="res://resources/sounds/hit_sound.mp3" id="2_b8o02"]
+[ext_resource type="AudioStream" uid="uid://d0lksm0plxx5f" path="res://resources/sounds/lvl_up.wav" id="3_b8o02"]
+
+[node name="GameSoundManager" type="Node"]
+script = ExtResource("1_tw87m")
+
+[node name="HittingEnemy" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_b8o02")
+bus = &"SFX"
+
+[node name="LvlUpSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_b8o02")
+bus = &"SFX"
