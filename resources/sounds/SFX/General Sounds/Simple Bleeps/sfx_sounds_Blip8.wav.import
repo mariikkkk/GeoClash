@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://eh28sa5bkqne"
+path="res://.godot/imported/sfx_sounds_Blip8.wav-c45e25246f87fc1a265c8323d8b2a4c9.sample"
+
+[deps]
+
+source_file="res://resources/sounds/SFX/General Sounds/Simple Bleeps/sfx_sounds_Blip8.wav"
+dest_files=["res://.godot/imported/sfx_sounds_Blip8.wav-c45e25246f87fc1a265c8323d8b2a4c9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

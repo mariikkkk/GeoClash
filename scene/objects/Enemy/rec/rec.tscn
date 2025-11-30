@@ -1,0 +1,84 @@
+[gd_scene load_steps=12 format=3 uid="uid://fiew2xwoh0xt"]
+
+[ext_resource type="Script" uid="uid://w2cpnsd8fuea" path="res://scene/objects/Enemy/rec/rec.gd" id="1_car7i"]
+[ext_resource type="PackedScene" uid="uid://mcgwssm11xbq" path="res://scene/components/exp_bottle_drop_component.tscn" id="2_y2dmr"]
+[ext_resource type="PackedScene" uid="uid://cdw671x8skhgy" path="res://scene/components/health_component.tscn" id="3_8snqj"]
+[ext_resource type="PackedScene" uid="uid://cm1qk288p0nb8" path="res://scene/components/hurt_box_component.tscn" id="4_84d3n"]
+[ext_resource type="Texture2D" uid="uid://daycf52wcw0ui" path="res://scene/objects/Enemy/rec/particles_rec.png" id="6_70ia8"]
+[ext_resource type="Texture2D" uid="uid://ctq3wjb0xb3ru" path="res://scene/objects/Enemy/rec/rec.png" id="14_hub6g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sl644"]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3mhno"]
+radius = 11.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_770wr"]
+radius = 3.0
+
+[sub_resource type="GDScript" id="GDScript_oyx3t"]
+script/source = "extends Sprite2D
+"
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_8p5tp"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(8, 8, 1)
+emission_shape = 3
+emission_box_extents = Vector3(1, 1, 1)
+spread = 180.0
+initial_velocity_min = 10.0
+initial_velocity_max = 40.0
+gravity = Vector3(0, 50, 0)
+damping_min = 100.00001
+damping_max = 100.00001
+scale_min = 0.01
+scale_max = 0.03
+
+[node name="Rec" type="CharacterBody2D" groups=["enemy"]]
+scale = Vector2(1.9999995, 1.9999995)
+collision_layer = 0
+script = ExtResource("1_car7i")
+
+[node name="ExpBottleDropComponent" parent="." instance=ExtResource("2_y2dmr")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_8snqj")]
+max_health = 10.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_sl644")
+disabled = true
+
+[node name="EnemyHitBox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 0
+
+[node name="HitBoxShape" type="CollisionShape2D" parent="EnemyHitBox"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_3mhno")
+
+[node name="HurtBoxComponent" parent="." node_paths=PackedStringArray("health_component") instance=ExtResource("4_84d3n")]
+light_mask = 256
+visibility_layer = 512
+health_component = NodePath("../HealthComponent")
+
+[node name="HurtBoxShape" type="CollisionShape2D" parent="HurtBoxComponent"]
+position = Vector2(0, -8)
+shape = SubResource("CircleShape2D_770wr")
+
+[node name="Rec" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(0, -8)
+scale = Vector2(0.09500004, 0.09500004)
+texture = ExtResource("14_hub6g")
+script = SubResource("GDScript_oyx3t")
+
+[node name="DeathParticles" type="GPUParticles2D" parent="."]
+position = Vector2(0, -8.000002)
+emitting = false
+amount = 300
+texture = ExtResource("6_70ia8")
+lifetime = 0.4
+one_shot = true
+process_material = SubResource("ParticleProcessMaterial_8p5tp")

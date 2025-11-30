@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://f3givhwkdvv6"]
+
+[ext_resource type="Texture2D" uid="uid://ba6rf6l1556hy" path="res://resources/icon/upgrades/orb_count_icon.png" id="1_0ctw7"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_j45fp"]
+
+[resource]
+script = ExtResource("1_j45fp")
+id = "orb_count"
+title = "Шарики! Шарики!"
+description = "Увеличивает количество сфер на 1 единицу."
+icon = ExtResource("1_0ctw7")
+upgrade_type = "orb_count"
+value = 1.0
+color = Color(0.78039217, 0.78431374, 0, 1)
+max_quantity = 4
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

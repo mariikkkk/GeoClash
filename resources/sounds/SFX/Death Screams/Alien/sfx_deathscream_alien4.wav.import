@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dua3fwgnpeduh"
+path="res://.godot/imported/sfx_deathscream_alien4.wav-d6460d6d678ad746c1b37bcae9596e49.sample"
+
+[deps]
+
+source_file="res://resources/sounds/SFX/Death Screams/Alien/sfx_deathscream_alien4.wav"
+dest_files=["res://.godot/imported/sfx_deathscream_alien4.wav-d6460d6d678ad746c1b37bcae9596e49.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

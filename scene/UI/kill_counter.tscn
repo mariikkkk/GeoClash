@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=3 uid="uid://b84lt4bvlnvay"]
+
+[ext_resource type="Texture2D" uid="uid://clvlrfq14eucu" path="res://resources/icon/scull.png" id="1_otppp"]
+[ext_resource type="Script" uid="uid://cwujm2mwvtg7r" path="res://scene/UI/kill_counter.gd" id="1_qttbg"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_qttbg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x1gwe"]
+font = ExtResource("2_qttbg")
+font_size = 64
+outline_size = 16
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 13
+shadow_color = Color(0, 0, 0, 0.37254903)
+shadow_offset = Vector2(2, 2)
+
+[node name="KillCounter" type="CanvasLayer" groups=["kill_counter_ui"]]
+script = ExtResource("1_qttbg")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_left = 1512.0
+offset_top = 32.0
+offset_right = 1616.0
+offset_bottom = 165.0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+texture = ExtResource("1_otppp")
+
+[node name="KillLabel" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "0"
+label_settings = SubResource("LabelSettings_x1gwe")

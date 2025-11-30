@@ -1,0 +1,152 @@
+[gd_scene load_steps=11 format=3 uid="uid://bak1tkbalvsps"]
+
+[ext_resource type="Script" uid="uid://c3qvdfkq8xjaa" path="res://scene/UI/end_screen.gd" id="1_iyald"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="2_eroqu"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lp4nh"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+shadow_size = 16
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ssjoa"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_lp4nh"]
+font = ExtResource("2_eroqu")
+font_size = 64
+outline_size = 15
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="FontVariation" id="FontVariation_ssjoa"]
+base_font = ExtResource("2_eroqu")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_seueg"]
+bg_color = Color(1, 1, 1, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_eroqu"]
+bg_color = Color(0.47397572, 0.47397578, 0.4739756, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_size = 5
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eroqu"]
+
+[sub_resource type="FontVariation" id="FontVariation_73g0p"]
+base_font = ExtResource("2_eroqu")
+
+[node name="EndScreen" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_iyald")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxFlat_lp4nh")
+
+[node name="MarginContainer" type="MarginContainer" parent="MarginContainer/PanelContainer"]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 40
+theme_override_constants/margin_bottom = 40
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 30
+
+[node name="NameLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_styles/normal = SubResource("StyleBoxFlat_ssjoa")
+text = "Game over"
+label_settings = SubResource("LabelSettings_lp4nh")
+horizontal_alignment = 1
+
+[node name="Restart" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_focus_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+theme_override_fonts/font = SubResource("FontVariation_ssjoa")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_seueg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eroqu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eroqu")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eroqu")
+text = "Restart"
+
+[node name="NameLabel2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart"]
+layout_mode = 0
+offset_left = 172.0
+offset_top = 22.0
+offset_right = 352.0
+offset_bottom = 155.0
+size_flags_horizontal = 4
+text = "Restart
+"
+label_settings = SubResource("LabelSettings_lp4nh")
+
+[node name="Quit" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_73g0p")
+theme_override_font_sizes/font_size = 64
+theme_override_styles/normal = SubResource("StyleBoxFlat_seueg")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_eroqu")
+theme_override_styles/hover = SubResource("StyleBoxFlat_eroqu")
+text = "Quit"
+
+[node name="NameLabel2" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit"]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 22.0
+offset_right = 391.0
+offset_bottom = 155.0
+size_flags_horizontal = 4
+text = "Quit
+"
+label_settings = SubResource("LabelSettings_lp4nh")
+
+[connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Restart" to="." method="_on_restart_pressed"]
+[connection signal="mouse_entered" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="pressed" from="MarginContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]

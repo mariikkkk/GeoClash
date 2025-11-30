@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://dk4msgblb7cn4"]
+
+[ext_resource type="Texture2D" uid="uid://76jdgkqgekjf" path="res://resources/icon/upgrades/magnet_icon.png" id="1_xfbll"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="2_ff3ts"]
+
+[resource]
+script = ExtResource("2_ff3ts")
+id = "pickup_range"
+title = "Руки загребуки!"
+description = "Увеличивает радиус подбора опыта."
+icon = ExtResource("1_xfbll")
+upgrade_type = "pickup_range"
+value = 0.2
+color = Color(1.0588765e-06, 0.60593504, 0.65817434, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

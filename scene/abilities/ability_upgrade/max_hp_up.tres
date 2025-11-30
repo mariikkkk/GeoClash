@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://cp8gex7t52a2y"]
+
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_jnhmr"]
+[ext_resource type="Texture2D" uid="uid://k43q8f5ssctx" path="res://resources/icon/upgrades/health_upgrade_icon.png" id="1_kpo3x"]
+
+[resource]
+script = ExtResource("1_jnhmr")
+id = "max_hp_up"
+title = "Будь крепче!"
+description = "Увеличивает максимальное здоровье на 10."
+icon = ExtResource("1_kpo3x")
+upgrade_type = "hp"
+value = 10.0
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

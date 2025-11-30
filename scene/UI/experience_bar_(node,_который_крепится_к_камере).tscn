@@ -1,0 +1,51 @@
+[gd_scene load_steps=6 format=3 uid="uid://qil2otuqm2th"]
+
+[ext_resource type="Script" uid="uid://cuog2yywsk5ud" path="res://scene/UI/experience_bar_(node,_который_крепится_к_камере).gd" id="1_t2yhg"]
+[ext_resource type="FontFile" uid="uid://dptl3bny01q6k" path="res://resources/fonts/SuperPixel-m2L8j.ttf" id="2_3e543"]
+[ext_resource type="FontFile" uid="uid://2jdljd0af6hu" path="res://resources/fonts/Jersey25-Regular.ttf" id="3_ccj05"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2yhg"]
+bg_color = Color(0.324574, 0.655522, 0.722626, 1)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.239216, 0.239216, 0.239216, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3e543"]
+font = ExtResource("3_ccj05")
+font_size = 64
+outline_size = 13
+outline_color = Color(0, 0, 0, 1)
+
+[node name="ExperienceBar (node, который крепится к камере)" type="CanvasLayer"]
+script = ExtResource("1_t2yhg")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="MarginContainer"]
+clip_contents = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+mouse_filter = 2
+theme_override_styles/fill = SubResource("StyleBoxFlat_t2yhg")
+max_value = 1.0
+value = 0.5
+show_percentage = false
+
+[node name="Label" type="Label" parent="."]
+offset_left = 12.0
+offset_top = 36.0
+offset_right = 318.0
+offset_bottom = 101.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_3e543")
+text = "Level: 1"
+label_settings = SubResource("LabelSettings_3e543")

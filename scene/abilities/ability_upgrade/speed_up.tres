@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://bco5ci55xxlfk"]
+
+[ext_resource type="Texture2D" uid="uid://c62ertjmglbtk" path="res://resources/icon/upgrades/speed_upgrade_icon.png" id="1_fmpkw"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="1_ilckc"]
+
+[resource]
+script = ExtResource("1_ilckc")
+id = "speed_up"
+title = "Быстрее!"
+description = "Увеличивает скорость передвижения на 10%."
+icon = ExtResource("1_fmpkw")
+upgrade_type = "speed"
+value = 0.1
+color = Color(0.018305665, 0.52519476, 0.99999994, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

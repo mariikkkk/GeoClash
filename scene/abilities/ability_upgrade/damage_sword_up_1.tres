@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityUpgrade" load_steps=3 format=3 uid="uid://l5vaoawb18el"]
+
+[ext_resource type="Texture2D" uid="uid://j886anvdlbhi" path="res://resources/icon/upgrades/SwordUpgradeIcon.png" id="1_ovxd5"]
+[ext_resource type="Script" uid="uid://cv8c6f6vailwh" path="res://scene/abilities/ability_upgrade/AbilityUpgrade.gd" id="2_tvu5o"]
+
+[resource]
+script = ExtResource("2_tvu5o")
+id = "damage_sword_up_1"
+title = "Больше урона!"
+description = "Увеличивает урон меча вашего меча на 1 единицу."
+icon = ExtResource("1_ovxd5")
+upgrade_type = "damage"
+value = 1.0
+color = Color(0.8235294, 0, 0.9490196, 1)
+metadata/_custom_type_script = "uid://cv8c6f6vailwh"

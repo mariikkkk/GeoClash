@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bjkbnn1yklbem"
+path="res://.godot/imported/sfx_sound_nagger1.wav-f0063b6b4178591b1bd735d425a20bfc.sample"
+
+[deps]
+
+source_file="res://resources/sounds/SFX/General Sounds/Weird Sounds/sfx_sound_nagger1.wav"
+dest_files=["res://.godot/imported/sfx_sound_nagger1.wav-f0063b6b4178591b1bd735d425a20bfc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

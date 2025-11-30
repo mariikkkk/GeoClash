@@ -1,0 +1,34 @@
+[gd_scene load_steps=7 format=3 uid="uid://bd274vmmjkfps"]
+
+[ext_resource type="Script" uid="uid://b0ulaqake5pt5" path="res://scene/manager/game_sound_manager.gd" id="1_b8o02"]
+[ext_resource type="AudioStream" uid="uid://ds3e6bsn3elq6" path="res://resources/sounds/SFX/General Sounds/Simple Damage Sounds/sfx_damage_hit8.wav" id="2_5lwu5"]
+[ext_resource type="AudioStream" uid="uid://d0lksm0plxx5f" path="res://resources/sounds/lvl_up.wav" id="3_ghf7i"]
+[ext_resource type="AudioStream" uid="uid://0igyuw87fca" path="res://resources/sounds/SFX/Weapons/Cannon/sfx_wpn_cannon2.wav" id="4_5lwu5"]
+[ext_resource type="AudioStream" uid="uid://cva0w4f4op5qk" path="res://resources/sounds/SFX/General Sounds/Coins/sfx_coin_single3.wav" id="5_ghf7i"]
+[ext_resource type="AudioStream" uid="uid://bmrbcf1wx6tsh" path="res://resources/sounds/SFX/General Sounds/Positive Sounds/sfx_sounds_powerup16.wav" id="6_jeujj"]
+
+[node name="GameSoundManager" type="Node"]
+script = ExtResource("1_b8o02")
+
+[node name="EnemyHitting" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_5lwu5")
+bus = &"SFX"
+
+[node name="LvlUp" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_ghf7i")
+bus = &"SFX"
+
+[node name="EnemyDead" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("4_5lwu5")
+volume_db = -1.0
+pitch_scale = 2.0
+bus = &"SFX"
+
+[node name="ExpRaise" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_ghf7i")
+volume_db = -5.0
+bus = &"SFX"
+
+[node name="HpRecovery" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_jeujj")
+pitch_scale = 1.6

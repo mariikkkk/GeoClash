@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cmjrcqkm2n0rj"
+path="res://.godot/imported/sfx_movement_jump17_landing.wav-b09757e1d7df186982d6ae87dd2f21b8.sample"
+
+[deps]
+
+source_file="res://resources/sounds/SFX/Movement/Jumping and Landing/sfx_movement_jump17_landing.wav"
+dest_files=["res://.godot/imported/sfx_movement_jump17_landing.wav-b09757e1d7df186982d6ae87dd2f21b8.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
