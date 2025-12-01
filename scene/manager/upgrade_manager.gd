@@ -31,24 +31,6 @@ var orbital_attack: Node ## Ссылка на атаку сферами.
 var current_upgrades: Dictionary = {}
 
 
-## Проверяет, можно ли взять апгрейд (учёт max_quantity).
-##
-## [param upgrade] — проверяемый апгрейд.
-func _can_take_upgrade(upgrade: AbilityUpgrade) -> bool:
-	if upgrade == null:
-		return false
-
-	if upgrade.max_quantity <= 0:
-		return true
-
-	var id := upgrade.id
-	if not current_upgrades.has(id):
-		return true
-
-	var qty: int = current_upgrades[id].get("quantity", 0)
-	return qty < upgrade.max_quantity
-
-
 ## Инициализация менеджера, подключение сигналов и поиск игрока.
 func _ready() -> void:
 	player = get_tree().get_first_node_in_group("player") as Node2D
@@ -92,6 +74,8 @@ func _pick_random_upgrades(source: Array[AbilityUpgrade], count: int) -> Array[A
 	for u in source:
 		if _can_take_upgrade(u):
 			temp.append(u)
+		else:
+			print("Достигнут лимит ", u.title, ": ", u.max_quantity)
 
 	while result.size() < count and temp.size() > 0:
 		var idx := randi() % temp.size()
@@ -101,7 +85,23 @@ func _pick_random_upgrades(source: Array[AbilityUpgrade], count: int) -> Array[A
 
 	return result
 
+## Проверяет, можно ли взять апгрейд (учёт max_quantity).
+##
+## [param upgrade] — проверяемый апгрейд.
+func _can_take_upgrade(upgrade: AbilityUpgrade) -> bool:
+	if upgrade == null:
+		return false
 
+	if upgrade.max_quantity <= 0:
+		return true
+
+	var id := upgrade.id
+	if not current_upgrades.has(id):
+		return true
+
+	var qty: int = current_upgrades[id].get("quantity", 0)
+	return qty < upgrade.max_quantity
+	
 ## Обрабатывает выбор игроком карточки.
 ##
 ## [param upgrade] — выбранный апгрейд.

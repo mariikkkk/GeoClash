@@ -12,8 +12,8 @@
 [ext_resource type="PackedScene" uid="uid://ckh6jbtffyexi" path="res://scene/UI/arena_time_ui.tscn" id="5_ao10f"]
 [ext_resource type="PackedScene" uid="uid://h1jmxpjnrtis" path="res://scene/manager/arena_time_manager.tscn" id="6_1e2t7"]
 [ext_resource type="Script" uid="uid://dlrqefft1kawf" path="res://scene/Level/camera_2d.gd" id="12_7x2fd"]
-[ext_resource type="Script" uid="uid://bpt1c5delgv47" path="res://scene/manager/exp_manager.gd" id="13_c0ql2"]
 [ext_resource type="AudioStream" uid="uid://cmmh2y0ocjk7q" path="res://resources/sounds/background.mp3" id="15_2gi1k"]
+[ext_resource type="PackedScene" uid="uid://bj0pulmfha8xd" path="res://scene/objects/Enemy/triangleDash/triangleDash.tscn" id="15_ng1xy"]
 [ext_resource type="Script" uid="uid://d28tli4tk2o6o" path="res://scene/Level/background.gd" id="16_ng1xy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_npafy"]
@@ -32,25 +32,6 @@ size = Vector2(2373.5, 2228.375)
 script = ExtResource("1_pww6y")
 end_screen_scene = ExtResource("2_2gi1k")
 pause_screen_scene = ExtResource("3_ng1xy")
-
-[node name="KillCounter" parent="." instance=ExtResource("4_2gi1k")]
-
-[node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("5_ao10f")]
-arena_time_manager = NodePath("../ArenaTimeManager")
-
-[node name="ExperienceBar (node, который крепится к камере)" parent="." node_paths=PackedStringArray("experience_manager") instance=ExtResource("2_qc4j8")]
-experience_manager = NodePath("../ExperienceManager")
-
-[node name="UpgradeManager" parent="." instance=ExtResource("2_x4mos")]
-
-[node name="ArenaTimeManager" parent="." instance=ExtResource("6_1e2t7")]
-
-[node name="ExperienceManager" type="Node" parent="."]
-script = ExtResource("13_c0ql2")
-metadata/_custom_type_script = "uid://bpt1c5delgv47"
-
-[node name="EnemySpawner" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_aiioc")]
-arena_time_manager = NodePath("../ArenaTimeManager")
 
 [node name="floor" type="TileMapLayer" parent="."]
 use_parent_material = true
@@ -77,6 +58,23 @@ shape = SubResource("RectangleShape2D_n8i3t")
 position = Vector2(2579, 383.8125)
 shape = SubResource("RectangleShape2D_6ffh6")
 
+[node name="player" parent="." groups=["back_layer"] instance=ExtResource("2_5homi")]
+position = Vector2(295, 204)
+
+[node name="KillCounter" parent="." instance=ExtResource("4_2gi1k")]
+
+[node name="ArenaTimeUI" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("5_ao10f")]
+arena_time_manager = NodePath("../ArenaTimeManager")
+
+[node name="ExperienceBar (node, который крепится к камере)" parent="." instance=ExtResource("2_qc4j8")]
+
+[node name="UpgradeManager" parent="." instance=ExtResource("2_x4mos")]
+
+[node name="ArenaTimeManager" parent="." instance=ExtResource("6_1e2t7")]
+
+[node name="EnemySpawner" parent="." node_paths=PackedStringArray("arena_time_manager") instance=ExtResource("1_aiioc")]
+arena_time_manager = NodePath("../ArenaTimeManager")
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(1.3, 1.3)
 limit_left = -1000
@@ -87,13 +85,11 @@ position_smoothing_enabled = true
 position_smoothing_speed = 4.0
 script = ExtResource("12_7x2fd")
 
-[node name="player" parent="." node_paths=PackedStringArray("experience_manager") groups=["back_layer"] instance=ExtResource("2_5homi")]
-position = Vector2(295, 204)
-experience_manager = NodePath("../ExperienceManager")
-
 [node name="background" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("15_2gi1k")
 autoplay = true
 bus = &"Music"
 parameters/looping = true
 script = ExtResource("16_ng1xy")
+
+[node name="triangleDash" parent="." instance=ExtResource("15_ng1xy")]

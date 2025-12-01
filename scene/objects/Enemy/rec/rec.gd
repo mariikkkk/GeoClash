@@ -53,9 +53,7 @@ func _process(_delta: float) -> void:
 	var player := get_tree().get_first_node_in_group("player") as Node2D
 	if player == null:
 		return
-
 	velocity = max_speed * direction
-
 	if global_position.distance_squared_to(player.global_position) < pow(max_distance, 2):
 		move_and_slide()
 

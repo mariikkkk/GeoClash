@@ -12,5 +12,5 @@ icon = ExtResource("1_0ctw7")
 upgrade_type = "orb_count"
 value = 1.0
 color = Color(0.78039217, 0.78431374, 0, 1)
-max_quantity = 4
+max_quantity = 2
 metadata/_custom_type_script = "uid://cv8c6f6vailwh"

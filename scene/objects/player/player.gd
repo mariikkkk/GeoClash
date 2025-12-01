@@ -1,5 +1,5 @@
 ## Игрок. Движение по вводу, получение урона, взаимодействие с опытом и камерой.[br]
-## Обрабатывает здоровье, подбор предметов, неуязвимость и реакции на врагов.
+## Обрабатывает здоровье, неуязвимость и реакции на врагов.
 class_name Player
 extends CharacterBody2D
 
@@ -13,7 +13,7 @@ extends CharacterBody2D
 @onready var progress_bar = $ProgressBar
 
 ## Менеджер опыта.
-@export var experience_manager: ExperienceManager
+@onready var experience_manager: ExperienceManager = $ExperienceManager
 
 ## Компонент здоровья.
 @onready var health_component = $HealthComponent

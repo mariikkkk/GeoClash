@@ -1,7 +1,8 @@
-[gd_scene load_steps=11 format=3 uid="uid://dsodfpc2mypm5"]
+[gd_scene load_steps=12 format=3 uid="uid://dsodfpc2mypm5"]
 
 [ext_resource type="Script" uid="uid://dv2mjwa5htahq" path="res://scene/objects/player/player.gd" id="1_or8g5"]
 [ext_resource type="PackedScene" uid="uid://ws405ssew3p2" path="res://scene/abilities/orbital_orb_attack_ability/orbital_orb_attack_controller.tscn" id="3_wwrti"]
+[ext_resource type="Script" uid="uid://bpt1c5delgv47" path="res://scene/manager/exp_manager.gd" id="6_yowq0"]
 [ext_resource type="Texture2D" uid="uid://bqcluv1kjcbao" path="res://scene/objects/player/Circ.png" id="24_6skk2"]
 [ext_resource type="Script" uid="uid://b3ohfy5lvqv71" path="res://scene/components/health_component.gd" id="24_wwrti"]
 [ext_resource type="PackedScene" uid="uid://c4au4it33akv6" path="res://scene/abilities/sword_attack_ability/attack_contoller.tscn" id="83_hh468"]
@@ -90,6 +91,10 @@ texture = ExtResource("24_6skk2")
 script = ExtResource("24_wwrti")
 max_health = 60.0
 metadata/_custom_type_script = "uid://b3ohfy5lvqv71"
+
+[node name="ExperienceManager" type="Node" parent="."]
+script = ExtResource("6_yowq0")
+metadata/_custom_type_script = "uid://bpt1c5delgv47"
 
 [connection signal="timeout" from="GracePeriod" to="." method="_on_grace_period_timeout"]
 [connection signal="area_entered" from="PlayerHurtBox" to="." method="_on_player_hurt_box_area_entered"]

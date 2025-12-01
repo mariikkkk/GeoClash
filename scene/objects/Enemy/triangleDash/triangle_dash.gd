@@ -120,14 +120,17 @@ func _physics_process(delta: float):
 
 	# Поворот к игроку
 	var face_dir: Vector2
-	if state == State.DASH:
-		face_dir = dash_dir
+	if state == State.DASH or state == State.WINDUP:
+		if dash_dir.length_squared() > 0.0001:
+			face_dir = dash_dir
+		else:
+			face_dir = Vector2.RIGHT
 	else:
-		face_dir = (player.global_position - global_position).normalized()
-
-	var to_player := player.global_position - global_position
-	if to_player.length_squared() > 0.0001:
-		face_dir = to_player.normalized()
+		var to_player := player.global_position - global_position
+		if to_player.length_squared() > 0.0001:
+			face_dir = to_player.normalized()
+		else:
+			face_dir = Vector2.RIGHT
 
 	var target_angle := face_dir.angle()
 	rotation = lerp_angle(rotation, target_angle, clamp(rotate_speed * delta, 0.0, 1.0))
@@ -138,16 +141,15 @@ func _physics_process(delta: float):
 			var dir := (player.global_position - global_position).normalized()
 			velocity = dir * max_speed
 			move_and_slide()
-
 			if global_position.distance_to(player.global_position) < dash_trigger_dist:
 				state = State.WINDUP
 				t = 0.0
-
+				dash_dir = (player.global_position - global_position).normalized()
+				
 		State.WINDUP:
 			velocity = Vector2.ZERO
 			t += delta
 			if t >= windup:
-				dash_dir = (player.global_position - global_position).normalized()
 				state = State.DASH
 				t = 0.0
 

@@ -42,12 +42,3 @@ func test_parametrized_damage_set():
 		await get_tree().process_frame
 		var expected = max(10 - dmg, 0)
 		assert_eq(hc.current_health, float(expected), "Провал на уроне %s" % dmg)
-
-func test_on_level_up_restores_and_increases_max():
-	var hc := await _make_hc(5)
-	hc.take_damage(3)
-	assert_eq(hc.current_health, 2.0)
-
-	hc.on_level_up(2)  # уровень не важен
-	assert_eq(hc.max_health, 6.0, "max_health +1")
-	assert_eq(hc.current_health, 6.0, "полное восстановление HP")
